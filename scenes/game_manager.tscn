@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dexnv7uxri85u"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_o2hi4"]
+[ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_pj82j"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_o2hi4")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 223.0
+offset_top = -21.0
+offset_right = 331.0
+offset_bottom = 2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_pj82j")
+theme_override_font_sizes/font_size = 8
+text = "U got x coins"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RespawnTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.6
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]

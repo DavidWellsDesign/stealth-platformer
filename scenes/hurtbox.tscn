@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bww38fujh6wsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8wkf"]
+size = Vector2(12, 16)
+
+[node name="Hurtbox" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_q8wkf")
+debug_color = Color(1, 0, 0, 0.419608)

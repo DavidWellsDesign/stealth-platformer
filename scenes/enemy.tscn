@@ -1,0 +1,112 @@
+[gd_scene load_steps=13 format=3 uid="uid://cws5a13wubp4y"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_4iiej"]
+[ext_resource type="Texture2D" uid="uid://bj3e53qrlcwd" path="res://assets/sprites/slime_purple.png" id="1_nuex3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co47j"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmwkb"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8cke"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70aue"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_els8b"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdymd"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_teqwo"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uivb"]
+atlas = ExtResource("1_nuex3")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6gvn3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co47j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmwkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8cke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70aue")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_els8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdymd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_teqwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uivb")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bkor"]
+size = Vector2(14, 13)
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_4iiej")
+health = 30
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6gvn3")
+animation = &"hurt"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_8bkor")
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="AttackCooldown" type="Timer" parent="Timers"]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[node name="StunTime" type="Timer" parent="Timers"]
+unique_name_in_owner = true
+wait_time = 0.4
+one_shot = true
+
+[node name="Despawn" type="Timer" parent="Timers"]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timers/AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="Timers/StunTime" to="." method="_on_stun_time_timeout"]
+[connection signal="timeout" from="Timers/Despawn" to="." method="_on_despawn_timeout"]

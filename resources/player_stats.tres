@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d4kfpmr3xb3c0"]
+
+[ext_resource type="Script" path="res://scripts/player_stats.gd" id="1_t3tsr"]
+
+[resource]
+script = ExtResource("1_t3tsr")
+health = 100
+max_health = 100
+strings = PackedStringArray()

@@ -1,0 +1,15 @@
+extends Resource
+
+@export var health: int
+@export var max_health: int
+@export var sub_resource: Resource
+@export var strings: PackedStringArray
+
+# Make sure that every parameter has a default value.
+# Otherwise, there will be problems with creating and editing
+# your resource via the inspector.
+func _init(p_health = 0, p_max_health = 0, p_sub_resource = null, p_strings = []):
+	health = p_health
+	max_health = p_max_health
+	sub_resource = p_sub_resource
+	strings = p_strings

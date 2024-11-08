@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://4cnwogbcm6lt"]
+
+[ext_resource type="Texture2D" uid="uid://cybs5ahi7uxmb" path="res://assets/sprites/Spotlight.png" id="1_858o8"]
+
+[node name="PointLight2D" type="PointLight2D"]
+position = Vector2(0, -32)
+shadow_enabled = true
+shadow_item_cull_mask = 15
+texture = ExtResource("1_858o8")
+offset = Vector2(0, 32)
+
+[node name="RotationPoint" type="Marker2D" parent="."]
+position = Vector2(0, -32)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c47n0jl0y20py"]
+
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_dsv1l"]
+[ext_resource type="Texture2D" uid="uid://cmfdluwai8w4s" path="res://assets/sprites/longSpotlight.png" id="1_utf4p"]
+
+[node name="Camera" type="Node2D"]
+script = ExtResource("1_dsv1l")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("1_utf4p")
+offset = Vector2(0, 64)
