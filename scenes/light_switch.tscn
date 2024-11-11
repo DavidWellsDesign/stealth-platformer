@@ -1,13 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwmmnfc50xhcu"]
+[gd_scene load_steps=7 format=3 uid="uid://dhhuk7gj6q0sl"]
 
-[ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="1_4qcqm"]
-[ext_resource type="Script" path="res://scripts/locker.gd" id="1_mw2au"]
+[ext_resource type="Script" path="res://scenes/light_switch.gd" id="1_etknb"]
+[ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="2_k7qnn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rscvw"]
 light_mode = 1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0a5dw"]
-atlas = ExtResource("1_4qcqm")
+atlas = ExtResource("2_k7qnn")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ncet"]
@@ -26,10 +26,10 @@ animations = [{
 [node name="Locker" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_mw2au")
+script = ExtResource("1_etknb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-self_modulate = Color(0.367928, 0.709796, 0.4143, 1)
+self_modulate = Color(0.909336, 0.486123, 0.329888, 1)
 material = SubResource("CanvasItemMaterial_rscvw")
 sprite_frames = SubResource("SpriteFrames_7ncet")
 

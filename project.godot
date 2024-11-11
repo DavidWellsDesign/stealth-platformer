@@ -21,6 +21,10 @@ window/size/viewport_width=2000
 window/size/viewport_height=1000
 window/size/resizable=false
 
+[global_group]
+
+Player=""
+
 [input]
 
 jump={

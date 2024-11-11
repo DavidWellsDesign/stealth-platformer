@@ -44,6 +44,7 @@ animations = [{
 size = Vector2(10, 12)
 
 [node name="Slime" type="Node2D" groups=["Enemies"]]
+position = Vector2(61, 63)
 script = ExtResource("1_jirn8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

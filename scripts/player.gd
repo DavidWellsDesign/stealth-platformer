@@ -55,6 +55,7 @@ func _ready():
 func _on_spawn(position: Vector2, direction: String):
 	global_position = position
 	
+	
 func _physics_process(delta):
 	
 	if player_hidden == false:
