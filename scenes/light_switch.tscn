@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dhhuk7gj6q0sl"]
 
-[ext_resource type="Script" path="res://scenes/light_switch.gd" id="1_etknb"]
+[ext_resource type="Script" path="res://scripts/light_switch.gd" id="1_etknb"]
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="2_k7qnn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rscvw"]

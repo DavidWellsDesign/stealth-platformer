@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://qe5h77kw7pim"]
+
+[ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="1_euitt"]
+[ext_resource type="Texture2D" uid="uid://c1e4m5sd88ovn" path="res://assets/sprites/white.png" id="2_s3e2o"]
+
+[node name="SquareLight" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 8)
+texture = ExtResource("1_euitt")
+region_enabled = true
+region_rect = Rect2(0, 48, 32, 16)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 36)
+scale = Vector2(1, 2)
+texture = ExtResource("2_s3e2o")

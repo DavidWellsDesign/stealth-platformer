@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_dsv1l"]
 [ext_resource type="Texture2D" uid="uid://cmfdluwai8w4s" path="res://assets/sprites/longSpotlight.png" id="1_utf4p"]
-[ext_resource type="Script" path="res://scenes/light_collision.gd" id="3_vgqyf"]
+[ext_resource type="Script" path="res://scripts/light_collision.gd" id="3_vgqyf"]
 
 [node name="Camera" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_dsv1l")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

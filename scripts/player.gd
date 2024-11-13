@@ -129,11 +129,9 @@ func _physics_process(delta):
 					if wall_check_left.is_colliding():
 						velocity.x = WALL_JUMP_VELOCITY_X
 						animated_sprite.flip_h = false
-						print("wall jump right")
 					if wall_check_right.is_colliding():
 						velocity.x = -WALL_JUMP_VELOCITY_X
 						animated_sprite.flip_h = true
-						print("wall jump left")
 					can_wall_jump = false
 					wall_jump_cooldown.start()
 	else:

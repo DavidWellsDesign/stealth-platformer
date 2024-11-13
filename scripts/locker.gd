@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var player = %Player
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var interactable = false
 var player_hidden = false
@@ -11,6 +12,7 @@ signal revealPlayer
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("attack") and interactable == true:
+		animated_sprite_2d.play("open")
 		if player_hidden == false:
 			hidePlayer.emit()
 			player_hidden = true
