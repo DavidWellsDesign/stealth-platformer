@@ -30,6 +30,8 @@ var player_hidden = false
 var can_wall_jump = true
 var is_dashing = false
 var dash_timer = 0.0
+var coyote_time:bool = false
+var was_on_floor:bool = false
 
 signal game_over
 
@@ -41,6 +43,8 @@ signal game_over
 
 @onready var attack_cooldown = $Timers/AttackCooldown
 @onready var wall_jump_cooldown = $Timers/WallJumpCooldown
+@onready var coyote_timer = $Timers/CoyoteTimer
+
 
 func _ready():
 	# Set health meter max to starting health
@@ -57,7 +61,7 @@ func _on_spawn(position: Vector2, direction: String):
 	
 	
 func _physics_process(delta):
-	
+
 	if player_hidden == false:
 		if Input.is_action_just_pressed("attack") and can_attack == true:
 			animation_player.play("attack")
@@ -75,15 +79,20 @@ func _physics_process(delta):
 					else:
 						sword_point.rotation_degrees = 0
 			
+		if was_on_floor && !is_on_floor():
+			coyote_timer.start()
+			coyote_time = true
 		
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
 		# Handle jump.
-		if Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_time == true):
 			velocity.y = JUMP_VELOCITY
-			print("jump")
+			coyote_time = false
+
+		was_on_floor = is_on_floor()
 
 		if Input.is_action_just_pressed("dodge") and is_on_floor() and not is_dashing:
 			start_dash()
@@ -186,3 +195,6 @@ func _on_locker_reveal_player():
 	show()
 	player_hidden = false
 	collision_shape_2d.set_disabled(false)
+
+func _on_coyote_timer_timeout():
+	coyote_time = false

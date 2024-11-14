@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://durg1oq6unxov"]
+[gd_scene load_steps=10 format=3 uid="uid://durg1oq6unxov"]
 
 [ext_resource type="Script" path="res://scripts/level_select.gd" id="1_wuv6q"]
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="2_pix1r"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_1ghx4"]
+[ext_resource type="Texture2D" uid="uid://t4tb0rao83xq" path="res://assets/sprites/coin.png" id="4_5ddu7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plg74"]
 
@@ -65,10 +66,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -203.0
 offset_top = -78.0
-offset_right = 204.0
+offset_right = -18.0
 offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 12
 
 [node name="Level1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -113,6 +115,63 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
 text = "Level 3
 "
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -78.0
+offset_right = 198.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Level4" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
+text = "Level 4"
+
+[node name="Level5" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
+text = "Level 5"
+
+[node name="Level6" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
+text = "Level 6"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -120,16 +179,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -180.0
-offset_right = 113.0
-offset_bottom = -85.0
+offset_left = -159.0
+offset_top = -141.0
+offset_right = 160.0
+offset_bottom = -46.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_1ghx4")
 theme_override_font_sizes/font_size = 29
 text = "Select Stage"
 
+[node name="Level1Secret" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(147, 114)
+scale = Vector2(2, 2)
+texture = ExtResource("4_5ddu7")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Level4" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Level5" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Level6" to="." method="_on_exit_pressed"]

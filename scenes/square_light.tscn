@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://qe5h77kw7pim"]
+[gd_scene load_steps=4 format=3 uid="uid://qe5h77kw7pim"]
 
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="1_euitt"]
 [ext_resource type="Texture2D" uid="uid://c1e4m5sd88ovn" path="res://assets/sprites/white.png" id="2_s3e2o"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yi055"]
+light_mode = 1
+
 [node name="SquareLight" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_yi055")
 position = Vector2(0, 8)
 texture = ExtResource("1_euitt")
 region_enabled = true

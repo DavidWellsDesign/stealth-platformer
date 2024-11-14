@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpmm0vild0boj"]
+[gd_scene load_steps=6 format=3 uid="uid://cpmm0vild0boj"]
 
 [ext_resource type="Script" path="res://scripts/laser.gd" id="1_2t331"]
+[ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="2_0mp4x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44via"]
 light_mode = 1
@@ -8,10 +9,13 @@ light_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_htw0e"]
 light_mode = 1
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_esc0r"]
+light_mode = 1
+
 [node name="Laser" type="RayCast2D"]
 material = SubResource("CanvasItemMaterial_44via")
-position = Vector2(46, 78)
-target_position = Vector2(1000, 0)
+position = Vector2(0, 72)
+target_position = Vector2(640, 0)
 collision_mask = 3
 script = ExtResource("1_2t331")
 
@@ -19,3 +23,11 @@ script = ExtResource("1_2t331")
 visible = false
 material = SubResource("CanvasItemMaterial_htw0e")
 points = PackedVector2Array(0, 0, 99, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_esc0r")
+position = Vector2(8, 0)
+rotation = 1.57079
+texture = ExtResource("2_0mp4x")
+region_enabled = true
+region_rect = Rect2(32, 112, 16, 16)

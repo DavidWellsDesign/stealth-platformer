@@ -7,9 +7,9 @@ signal game_over
 func _ready():
 	enabled = true  # Enable raycasting
 
-func _process(_delta):
+func _physics_process(delta):
 	queue_redraw()
-
+	
 func _draw():
 	var line_end = target_position
 	

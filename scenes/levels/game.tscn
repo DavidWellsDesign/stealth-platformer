@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://rf11cngeitfg"]
+[gd_scene load_steps=25 format=4 uid="uid://c2hx2bhbmnif0"]
 
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="1_wi1ha"]
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="2_umn7t"]

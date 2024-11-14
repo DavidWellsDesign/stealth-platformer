@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c47n0jl0y20py"]
+[gd_scene load_steps=6 format=3 uid="uid://c47n0jl0y20py"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_dsv1l"]
 [ext_resource type="Texture2D" uid="uid://cmfdluwai8w4s" path="res://assets/sprites/longSpotlight.png" id="1_utf4p"]
+[ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="3_kpmcd"]
 [ext_resource type="Script" path="res://scripts/light_collision.gd" id="3_vgqyf"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jj03k"]
+light_mode = 1
+
 [node name="Camera" type="Node2D"]
-modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_dsv1l")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -13,42 +16,57 @@ shadow_enabled = true
 texture = ExtResource("1_utf4p")
 offset = Vector2(0, 64)
 
-[node name="LightCollision" type="RayCast2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_jj03k")
+rotation = 1.57079
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_kpmcd")
+region_enabled = true
+region_rect = Rect2(32, 97, 16, 15)
+
+[node name="Raycasts" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="LightCollision" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
 
-[node name="LightCollision4" type="RayCast2D" parent="."]
+[node name="LightCollision4" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = 0.113446
+scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
 
-[node name="LightCollision5" type="RayCast2D" parent="."]
+[node name="LightCollision5" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = -0.113446
+scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
 
-[node name="LightCollision2" type="RayCast2D" parent="."]
+[node name="LightCollision2" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = 0.226893
+scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
 
-[node name="LightCollision3" type="RayCast2D" parent="."]
+[node name="LightCollision3" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = -0.226893
+scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
 
-[connection signal="light_hit" from="LightCollision" to="." method="_on_light_collision_light_hit"]
-[connection signal="light_hit" from="LightCollision4" to="." method="_on_light_collision_light_hit"]
-[connection signal="light_hit" from="LightCollision5" to="." method="_on_light_collision_light_hit"]
-[connection signal="light_hit" from="LightCollision2" to="." method="_on_light_collision_light_hit"]
-[connection signal="light_hit" from="LightCollision3" to="." method="_on_light_collision_light_hit"]
+[connection signal="light_hit" from="Raycasts/LightCollision" to="." method="_on_light_collision_light_hit"]
+[connection signal="light_hit" from="Raycasts/LightCollision4" to="." method="_on_light_collision_light_hit"]
+[connection signal="light_hit" from="Raycasts/LightCollision5" to="." method="_on_light_collision_light_hit"]
+[connection signal="light_hit" from="Raycasts/LightCollision2" to="." method="_on_light_collision_light_hit"]
+[connection signal="light_hit" from="Raycasts/LightCollision3" to="." method="_on_light_collision_light_hit"]
