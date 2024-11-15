@@ -36,7 +36,6 @@ script = ExtResource("3_vgqyf")
 [node name="LightCollision4" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = 0.113446
-scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
@@ -44,7 +43,6 @@ script = ExtResource("3_vgqyf")
 [node name="LightCollision5" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = -0.113446
-scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
@@ -52,7 +50,6 @@ script = ExtResource("3_vgqyf")
 [node name="LightCollision2" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = 0.226893
-scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")
@@ -60,7 +57,6 @@ script = ExtResource("3_vgqyf")
 [node name="LightCollision3" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 5)
 rotation = -0.226893
-scale = Vector2(1, 1)
 target_position = Vector2(0, 100)
 collision_mask = 3
 script = ExtResource("3_vgqyf")

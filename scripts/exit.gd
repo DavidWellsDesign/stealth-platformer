@@ -11,7 +11,7 @@ var interactable = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("attack") and interactable == true:
-		LevelProgress.level_clear(level)
+		LevelProgress.level_clear(level,secret_exit)
 		print('Level complete!')
 		level_complete.visible = true
 		player.player_hidden = true

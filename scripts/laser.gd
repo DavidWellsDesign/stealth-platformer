@@ -19,4 +19,4 @@ func _draw():
 			print('laser hit player')
 			game_over.emit()
 	
-	draw_line(Vector2.ZERO, line_end, Color(0,1,0), 2.0)
+	draw_line(Vector2.ZERO, line_end, Color(1,1,1), 2.0)
