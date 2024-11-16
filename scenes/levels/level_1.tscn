@@ -149,7 +149,7 @@ secret_exit = true
 
 [node name="Player" parent="." instance=ExtResource("5_sxy0h")]
 unique_name_in_owner = true
-position = Vector2(-327, -153)
+position = Vector2(-343, -313)
 collision_mask = 29
 health = 50
 

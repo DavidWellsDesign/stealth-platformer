@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnt4c4i5u4tbd"]
+
+[ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="1_wgl8p"]
+
+[node name="LevelCompleteLayer" type="CanvasLayer"]
+
+[node name="LevelComplete" parent="." instance=ExtResource("1_wgl8p")]
+unique_name_in_owner = true
+visible = false
+offset_left = 160.0
+offset_top = 160.0
+offset_right = 160.0
+offset_bottom = 160.0
