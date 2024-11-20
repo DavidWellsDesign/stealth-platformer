@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://b6epq7x6804ta"]
+[gd_scene load_steps=19 format=4 uid="uid://b6epq7x6804ta"]
 
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="1_b43lv"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_7uo46"]
+[ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="3_15vbu"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_c58qs"]
 [ext_resource type="PackedScene" uid="uid://bjg3fbj55cgu7" path="res://scenes/player.tscn" id="5_sxy0h"]
 [ext_resource type="PackedScene" uid="uid://b2qx64xqac3dh" path="res://scenes/kill_zone.tscn" id="6_4xsgp"]
@@ -97,6 +98,9 @@ offset_top = 160.0
 offset_right = 160.0
 offset_bottom = 160.0
 
+[node name="LevelTimer" parent="LevelCompleteLayer" instance=ExtResource("3_15vbu")]
+unique_name_in_owner = true
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_7uo46")
@@ -149,7 +153,7 @@ secret_exit = true
 
 [node name="Player" parent="." instance=ExtResource("5_sxy0h")]
 unique_name_in_owner = true
-position = Vector2(-343, -313)
+position = Vector2(457, -65)
 collision_mask = 29
 health = 50
 

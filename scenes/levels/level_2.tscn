@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://c3g0wds481w3a"]
+[gd_scene load_steps=20 format=4 uid="uid://c3g0wds481w3a"]
 
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="1_ftleh"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_38cq7"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://qe5h77kw7pim" path="res://scenes/square_light.tscn" id="9_ygsnk"]
 [ext_resource type="PackedScene" uid="uid://cpmm0vild0boj" path="res://scenes/laser.tscn" id="10_6jr8y"]
 [ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="12_rahqt"]
+[ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="14_u37ga"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ivyll"]
 blend_mode = 1
@@ -58,14 +59,6 @@ script = ExtResource("4_5acbt")
 [node name="UI" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="LevelComplete" parent="UI" instance=ExtResource("4_tbafb")]
-unique_name_in_owner = true
-visible = false
-offset_left = -272.0
-offset_top = -328.0
-offset_right = -1719.0
-offset_bottom = -1041.0
-
 [node name="TileMaps" type="Node2D" parent="."]
 
 [node name="Background" type="TileMapLayer" parent="TileMaps"]
@@ -85,7 +78,7 @@ tile_set = ExtResource("1_ftleh")
 
 [node name="Player" parent="." instance=ExtResource("5_154x4")]
 unique_name_in_owner = true
-position = Vector2(-441, 24)
+position = Vector2(336, -312)
 collision_mask = 29
 health = 50
 
@@ -202,6 +195,22 @@ position = Vector2(432, -320)
 [node name="Exit2" parent="Objects" instance=ExtResource("12_rahqt")]
 position = Vector2(448, 32)
 secret_exit = true
+
+[node name="LevelCompleteLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelComplete" parent="LevelCompleteLayer" instance=ExtResource("4_tbafb")]
+unique_name_in_owner = true
+visible = false
+offset_left = 160.0
+offset_top = 160.0
+offset_right = 160.0
+offset_bottom = 160.0
+
+[node name="LevelTimer" parent="LevelCompleteLayer" instance=ExtResource("14_u37ga")]
+unique_name_in_owner = true
+offset_top = 8.0
+offset_bottom = 31.0
+level = 1
 
 [connection signal="timeout" from="GameManager/RespawnTimer" to="GameManager" method="_on_respawn_timer_timeout"]
 [connection signal="game_over" from="Player" to="GameManager" method="_on_player_game_over"]

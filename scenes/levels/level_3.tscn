@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=4 uid="uid://clqy4285o3niy"]
+[gd_scene load_steps=22 format=4 uid="uid://clqy4285o3niy"]
 
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="1_vajsg"]
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="2_fie2x"]
+[ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="3_fg1wy"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="3_q6evk"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_rwg3t"]
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="5_ydcom"]
@@ -62,6 +63,11 @@ offset_left = 160.0
 offset_top = 160.0
 offset_right = 160.0
 offset_bottom = 160.0
+
+[node name="LevelTimer" parent="LevelCompleteLayer" instance=ExtResource("3_fg1wy")]
+unique_name_in_owner = true
+offset_top = 8.0
+offset_bottom = 31.0
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true

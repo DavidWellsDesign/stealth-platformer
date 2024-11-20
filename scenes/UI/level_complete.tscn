@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://26oiant5it8x"]
+[gd_scene load_steps=6 format=3 uid="uid://26oiant5it8x"]
 
 [ext_resource type="Script" path="res://scripts/level_complete.gd" id="1_1765w"]
+[ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_0xj15"]
 [ext_resource type="PackedScene" uid="uid://b32j3n82e77x3" path="res://scenes/UI/button.tscn" id="2_u34n1"]
+[ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="2_wr64s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arx7l"]
-bg_color = Color(0.27451, 0.529412, 0.560784, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.219501, 0.219501, 0.219501, 1)
+bg_color = Color(0.478431, 0.109804, 0.294118, 1)
+border_width_left = 16
+border_width_top = 2
+border_width_right = 16
+border_width_bottom = 2
+border_color = Color(0.937255, 0.976471, 0.839216, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -41,35 +43,59 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_arx7l")
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 110.864
-offset_top = 12.3508
-offset_right = 234.864
-offset_bottom = 35.3508
-text = "Level Complete!"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="Score" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -65.5
-offset_top = -29.3606
-offset_right = 64.5
-offset_bottom = 67.6394
+offset_left = -110.484
+offset_top = -42.2477
+offset_right = 109.516
+offset_bottom = -19.2477
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wr64s")
+theme_override_font_sizes/font_size = 16
+text = "Completion Time:"
+
+[node name="Complete" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_top = 19.5769
+offset_right = 110.0
+offset_bottom = 42.5769
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_0xj15")
+theme_override_font_sizes/font_size = 16
+text = "Level Complete!"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.0
+offset_top = -49.7668
+offset_right = 132.0
+offset_bottom = -10.7668
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 12
 
 [node name="NextLevel" parent="Panel/VBoxContainer" instance=ExtResource("2_u34n1")]
 layout_mode = 2
-text = "Next Level"
+text = "Retry"
 
 [node name="MainMenu" parent="Panel/VBoxContainer" instance=ExtResource("2_u34n1")]
 layout_mode = 2
-text = "Main Menu"
+text = "Level Select"
 
 [connection signal="pressed" from="Panel/VBoxContainer/NextLevel" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

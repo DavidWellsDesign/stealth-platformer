@@ -1,5 +1,10 @@
 extends Control
 
+@onready var score = $Panel/Score
+
+func update_score(time):
+	score.text = 'Completion Time: '+ String(time) +'
+	Test'
 
 func _on_next_level_pressed():
 	pass # Replace with function body.

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1v43kqx27boh"]
+
+[ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_uio22"]
+[ext_resource type="Script" path="res://scripts/level_timer.gd" id="2_ygh7n"]
+
+[node name="LevelTimer" type="Label"]
+offset_left = 8.0
+offset_right = 86.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_uio22")
+theme_override_font_sizes/font_size = 8
+text = "Timer"
+script = ExtResource("2_ygh7n")
