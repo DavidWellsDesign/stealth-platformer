@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://t4tb0rao83xq" path="res://assets/sprites/coin.png" id="4_5ddu7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plg74"]
-bg_color = Color(0.478431, 0.109804, 0.294118, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_at8t2"]
 
@@ -27,12 +26,13 @@ corner_radius_bottom_left = 7
 shadow_size = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfeuc"]
-bg_color = Color(0.478431, 0.109804, 0.294118, 1)
-border_width_left = 2
+bg_color = Color(0.478431, 0.109804, 0.294118, 0)
+border_width_left = 8
 border_width_top = 2
-border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.937255, 0.976471, 0.839216, 1)
+corner_radius_top_left = 8
+corner_radius_bottom_left = 8
 anti_aliasing = false
 
 [node name="LevelSelect" type="Control"]
@@ -53,6 +53,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_plg74")
 
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 328.0
+offset_right = 368.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 8
+text = "Key | C = Cleared | S = Secret exit found | T = Best time"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -60,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -288.0
-offset_top = -32.0
-offset_right = -48.0
-offset_bottom = 96.0
+offset_left = -296.0
+offset_top = -132.0
+offset_right = -56.0
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
@@ -80,7 +90,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
-text = "[1] Getting Started"
+text = "[1] Level 1"
 alignment = 0
 
 [node name="Level2" type="Button" parent="VBoxContainer"]
@@ -95,7 +105,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
-text = "[2] It's kinda dark"
+text = "[2] Level 2"
 alignment = 0
 
 [node name="Level3" type="Button" parent="VBoxContainer"]
@@ -110,7 +120,52 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
-text = "[3] Lights & Lasers"
+text = "[3] Level 3"
+alignment = 0
+
+[node name="Level4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
+text = "[4] Level 4"
+alignment = 0
+
+[node name="Level5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
+text = "[5] Level 5"
+alignment = 0
+
+[node name="Level6" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_fonts/font = ExtResource("2_pix1r")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
+text = "[6] Level 6"
 alignment = 0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
@@ -120,58 +175,100 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = -32.0
-offset_right = 248.0
-offset_bottom = 96.0
+offset_left = 184.0
+offset_top = -132.0
+offset_right = 320.0
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
 
-[node name="Level4" type="Button" parent="VBoxContainer2"]
+[node name="Level 1 time" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
-theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
-theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("2_pix1r")
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
-theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
-text = "[4] Paralell Worlds"
-alignment = 0
+text = "T: [ ]"
 
-[node name="Level5" type="Button" parent="VBoxContainer2"]
+[node name="Level 2 time" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
-theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
-theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("2_pix1r")
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
-theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
-text = "Level 5"
-alignment = 0
+text = "T: [ ]"
 
-[node name="Level6" type="Button" parent="VBoxContainer2"]
+[node name="Level 3 time" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_pressed_color = Color(0.886275, 0.952941, 0.894118, 1)
-theme_override_colors/font_focus_color = Color(0.886275, 0.952941, 0.894118, 1)
-theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("2_pix1r")
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_at8t2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5htri")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
-theme_override_styles/normal = SubResource("StyleBoxFlat_sfeuc")
-text = "Level 6"
-alignment = 0
+text = "T: [ ]"
+
+[node name="Level 4 time" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "T: [ ]"
+
+[node name="Level 5 time" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "T: [ ]"
+
+[node name="Level 6 time" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "T: [ ]"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -132.0
+offset_right = 132.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Level 1 clear" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "C: [ ] S: [ ]"
+
+[node name="Level 2 clear" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "C: [ ] S: [ ]"
+
+[node name="Level 3 clear" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "C: [ ] S: [ ]"
+
+[node name="Level 4 clear" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "C: [ ] S: [ ]"
+
+[node name="Level 5 clear" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "C: [ ] S: [ ]"
+
+[node name="Level 6 clear" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_pix1r")
+text = "C: [ ] S: [ ]"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -180,15 +277,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -168.0
-offset_top = -72.0
-offset_right = 151.0
-offset_bottom = 23.0
+offset_left = -296.0
+offset_top = -164.0
+offset_right = 23.0
+offset_bottom = -69.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
 theme_override_fonts/font = ExtResource("3_1ghx4")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 16
 text = ">Select Level"
 
 [node name="Level1Secret" type="Sprite2D" parent="."]
@@ -202,6 +299,4 @@ region_rect = Rect2(0, 0, 16, 16)
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Level4" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Level5" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Level6" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level4" to="." method="_on_level_4_pressed"]
