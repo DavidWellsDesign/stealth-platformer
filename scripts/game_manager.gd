@@ -5,6 +5,7 @@ var score = 0
 @onready var player = %Player
 @onready var respawn_timer = %RespawnTimer
 
+# Not used!
 func add_point():
 	score += 1
 	score_label.text = "You have " + str(score) + " coins"

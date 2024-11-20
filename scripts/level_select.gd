@@ -24,6 +24,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	level_1.grab_focus()
+	
 	# ToDo: Update the below to use recursive statements so it's easier to add more levels
 	
 	# Disable locked levels
@@ -83,10 +85,6 @@ func _ready():
 		level_5_time.text = "T: ["+ str(LevelProgress.completionTimes[4])+"]"
 	if LevelProgress.completionTimes[5] > 0.0:
 		level_6_time.text = "T: ["+ str(LevelProgress.completionTimes[5])+"]"
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func _on_level_1_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")

@@ -82,7 +82,7 @@ tile_set = ExtResource("5_8hm38")
 
 [node name="Player" parent="." instance=ExtResource("6_igpy6")]
 unique_name_in_owner = true
-position = Vector2(432, -344)
+position = Vector2(-440, 16)
 collision_mask = 29
 health = 50
 

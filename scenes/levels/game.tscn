@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cws5a13wubp4y" path="res://scenes/enemy.tscn" id="11_6tyrx"]
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="12_yns6x"]
 [ext_resource type="PackedScene" uid="uid://m7e1xcyjk510" path="res://scenes/goal.tscn" id="13_1psnw"]
-[ext_resource type="Script" path="res://scripts/world_state.gd" id="14_cpe46"]
+[ext_resource type="Script" path="res://scripts/unused/world_state.gd" id="14_cpe46"]
 [ext_resource type="PackedScene" uid="uid://bkgjcgqxvsvlv" path="res://scenes/door.tscn" id="15_qrjej"]
 [ext_resource type="PackedScene" uid="uid://4cnwogbcm6lt" path="res://scenes/spotlight_small.tscn" id="16_r5faq"]
 

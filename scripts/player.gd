@@ -4,37 +4,8 @@ class_name Player
 
 @export var health:int
 @export var stats: Resource
+
 @onready var collision_shape_2d = $CollisionShape2D
-
-var knockback = 200
-
-const SPEED = 130.0
-const SLIDE_SPEED = 20
-
-const AIR_SPEED = 30
-const JUMP_VELOCITY = -250.0
-const AIR_SLOWDOWN = 2
-
-const WALL_JUMP_VELOCITY_X = 200 # Horizontal and vertical velocity for wall jump
-const WALL_JUMP_VELOCITY_Y = -200
-
-const DASH_SPEED = 150  # Speed of the dash
-const DASH_DURATION = 0.5  # Duration of the dash in seconds
-
-var equipped_weapon = "sword"
-var can_attack = true
-
-var player_hidden = false
-
-#var wall_jump_cooldown = 0.1  # Cooldown time between wall jumps
-var can_wall_jump = true
-var is_dashing = false
-var dash_timer = 0.0
-var coyote_time:bool = false
-var was_on_floor:bool = false
-
-signal game_over
-
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var wall_check_left = $WallCheckLeft
 @onready var wall_check_right = $WallCheckRight
@@ -45,9 +16,39 @@ signal game_over
 @onready var wall_jump_cooldown = $Timers/WallJumpCooldown
 @onready var coyote_timer = $Timers/CoyoteTimer
 
+var knockback = 200
+
+const SPEED = 130.0
+const SLIDE_SPEED = 20 # How much the character slides when stopping, lower number should be more
+
+const AIR_SPEED = 30
+const JUMP_VELOCITY = -250.0
+const AIR_SLOWDOWN = 5 # How fast you lose velocity in the air when releasing a direction
+
+const WALL_JUMP_VELOCITY_X = 200 # Horizontal and vertical velocity for wall jump
+const WALL_JUMP_VELOCITY_Y = -200
+
+const DASH_SPEED = 150  # Speed of the dash
+const DASH_DURATION = 0.5  # Duration of the dash in seconds
+
+var equipped_weapon = "sword"
+var can_attack = true
+
+var player_hidden = false # Used when play hides in a locker
+
+#var wall_jump_cooldown = 0.1  # Cooldown time between wall jumps
+var can_wall_jump = true
+var is_dashing = false
+var dash_timer = 0.0
+var coyote_time:bool = false
+var was_on_floor:bool = false
+
+signal game_over
+
+
 
 func _ready():
-	# Set health meter max to starting health
+	# Set health meter max to starting health NOT USED!
 	if stats:
 		health =stats.health
 		print(health)
@@ -56,6 +57,7 @@ func _ready():
 	else:
 		print("unable to find stats!")
 
+# This isn't used!
 func _on_spawn(position: Vector2, direction: String):
 	global_position = position
 	
@@ -79,6 +81,7 @@ func _physics_process(delta):
 					else:
 						sword_point.rotation_degrees = 0
 			
+		# Once you leave the ground start the coyote timer
 		if was_on_floor && !is_on_floor():
 			coyote_timer.start()
 			coyote_time = true
@@ -92,10 +95,11 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 			coyote_time = false
 
+		# Check for coyote time. ToDo: can we add Waluigi time?
 		was_on_floor = is_on_floor()
 
-		if Input.is_action_just_pressed("dodge") and is_on_floor() and not is_dashing:
-			start_dash()
+		#if Input.is_action_just_pressed("dodge") and is_on_floor() and not is_dashing:
+			#start_dash()
 		
 		if is_dashing:
 			perform_dash(delta)
