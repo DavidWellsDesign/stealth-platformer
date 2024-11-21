@@ -45,8 +45,6 @@ var was_on_floor:bool = false
 
 signal game_over
 
-
-
 func _ready():
 	# Set health meter max to starting health NOT USED!
 	if stats:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://buxdu6s2kf40a"
+path="res://.godot/imported/One Man Symphony - In The Blink Of An Eye (Free) - 04 In The Blink Of An Eye (Action 04).mp3-d0056d76dacd12851897daafb33743a4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 04 In The Blink Of An Eye (Action 04).mp3"
+dest_files=["res://.godot/imported/One Man Symphony - In The Blink Of An Eye (Free) - 04 In The Blink Of An Eye (Action 04).mp3-d0056d76dacd12851897daafb33743a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
