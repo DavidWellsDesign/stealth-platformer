@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c3g0wds481w3a"]
+[gd_scene load_steps=20 format=4 uid="uid://c3g0wds481w3a"]
 
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="1_ftleh"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_38cq7"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cpmm0vild0boj" path="res://scenes/laser.tscn" id="10_6jr8y"]
 [ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="12_rahqt"]
 [ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="14_u37ga"]
-[ext_resource type="PackedScene" uid="uid://c5a7p1krhvayb" path="res://scenes/searchlight.tscn" id="15_jyscx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ivyll"]
 blend_mode = 1
@@ -79,7 +78,7 @@ tile_set = ExtResource("1_ftleh")
 
 [node name="Player" parent="." instance=ExtResource("5_154x4")]
 unique_name_in_owner = true
-position = Vector2(336, -312)
+position = Vector2(-440, 32)
 collision_mask = 29
 health = 50
 
@@ -175,9 +174,6 @@ position = Vector2(464, -384)
 position = Vector2(-3.8147e-06, 50)
 scale = Vector2(1, 2.875)
 
-[node name="Searchlight" parent="Lighting" instance=ExtResource("15_jyscx")]
-position = Vector2(256, -376)
-
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Locker" parent="Objects" instance=ExtResource("9_ldy5y")]
@@ -222,7 +218,6 @@ level = 1
 [connection signal="game_over" from="Lighting/Camera4" to="GameManager" method="_on_camera_game_over"]
 [connection signal="game_over" from="Lighting/Camera2" to="GameManager" method="_on_camera_game_over"]
 [connection signal="game_over" from="Lighting/Camera3" to="GameManager" method="_on_camera_game_over"]
-[connection signal="game_over" from="Lighting/Searchlight" to="GameManager" method="_on_searchlight_game_over"]
 [connection signal="hidePlayer" from="Objects/Locker" to="Player" method="_on_locker_hide_player"]
 [connection signal="revealPlayer" from="Objects/Locker" to="Player" method="_on_locker_reveal_player"]
 [connection signal="hidePlayer" from="Objects/Locker2" to="Player" method="_on_locker_hide_player"]

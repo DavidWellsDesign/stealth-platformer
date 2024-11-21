@@ -86,18 +86,30 @@ func _ready():
 	if LevelProgress.completionTimes[5] > 0.0:
 		level_6_time.text = "T: ["+ str(LevelProgress.completionTimes[5])+"]"
 
+
 func _on_level_1_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 	AudioManager.update_music_for_scene("Track2")
+
 
 func _on_level_2_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
 	AudioManager.update_music_for_scene("Track3")
 
+
 func _on_level_3_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_3.tscn")
 	AudioManager.update_music_for_scene("Track4")
 
+
 func _on_level_4_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_4.tscn")
 	AudioManager.update_music_for_scene("Track2")
+
+
+func _on_level_5_pressed():
+	get_tree().change_scene_to_file("res://scenes/levels/level_5.tscn")
+
+
+func _on_level_6_pressed():
+	get_tree().change_scene_to_file("res://scenes/levels/level_6.tscn")
