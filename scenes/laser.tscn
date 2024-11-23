@@ -13,6 +13,7 @@ light_mode = 1
 light_mode = 1
 
 [node name="Laser" type="RayCast2D"]
+self_modulate = Color(0.956863, 0.180392, 0.121569, 1)
 material = SubResource("CanvasItemMaterial_44via")
 position = Vector2(0, 72)
 target_position = Vector2(640, 0)

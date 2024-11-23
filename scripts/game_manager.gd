@@ -46,8 +46,12 @@ func game_over():
 	AudioManager.play_hurt_sound()
 	Engine.time_scale = 0.5
 	player.get_node("CollisionShape2D").queue_free()
+	player.get_node("Hurtbox").queue_free()
 	respawn_timer.start()
 
 
 func _on_searchlight_game_over():
+	game_over()
+
+func _on_searchlight_area_entered(area):
 	game_over()

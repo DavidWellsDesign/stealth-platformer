@@ -1,10 +1,11 @@
-[gd_scene load_steps=45 format=3 uid="uid://bjg3fbj55cgu7"]
+[gd_scene load_steps=47 format=3 uid="uid://bjg3fbj55cgu7"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1ty7o"]
 [ext_resource type="Texture2D" uid="uid://cjegaeerofa08" path="res://assets/sprites/knight.png" id="1_ng7l2"]
 [ext_resource type="Resource" uid="uid://d4kfpmr3xb3c0" path="res://resources/player_stats.tres" id="2_5yo0d"]
 [ext_resource type="Script" path="res://scripts/sword_hitbox.gd" id="3_aanga"]
 [ext_resource type="Texture2D" uid="uid://b65cmujbortyc" path="res://assets/sprites/fruit.png" id="3_qdcs7"]
+[ext_resource type="Texture2D" uid="uid://ccvqadk0smuqv" path="res://assets/sprites/e small.png" id="6_onw1c"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2syoj"]
 light_mode = 1
@@ -312,6 +313,9 @@ bg_color = Color(0.135617, 0.135617, 0.135617, 1)
 bg_color = Color(0.88, 0.1496, 0.1496, 1)
 anti_aliasing = false
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rc8k5"]
+light_mode = 1
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 collision_layer = 2
@@ -404,6 +408,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_sngo4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tbuxg")
 value = 100.0
 show_percentage = false
+
+[node name="E" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+material = SubResource("CanvasItemMaterial_rc8k5")
+position = Vector2(0, -31)
+texture = ExtResource("6_onw1c")
 
 [connection signal="body_entered" from="AnimatedSprite2D/SwordPoint" to="AnimatedSprite2D/SwordPoint/SwordHitbox" method="_on_sword_point_body_entered"]
 [connection signal="timeout" from="Timers/AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

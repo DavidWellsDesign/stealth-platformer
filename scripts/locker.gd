@@ -23,7 +23,9 @@ func _process(delta):
 func _on_body_entered(body):
 		if body == player:
 			interactable = true
+			body.show_e()
 
 func _on_body_exited(body):
 	if body == player and player_hidden == false:
-			interactable = false
+		interactable = false
+		body.hide_e()

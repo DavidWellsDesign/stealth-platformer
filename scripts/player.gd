@@ -11,6 +11,7 @@ class_name Player
 @onready var wall_check_right = $WallCheckRight
 @onready var animation_player = $AnimationPlayer
 @onready var sword_point = $AnimatedSprite2D/SwordPoint
+@onready var e = %E
 
 @onready var attack_cooldown = $Timers/AttackCooldown
 @onready var wall_jump_cooldown = $Timers/WallJumpCooldown
@@ -199,3 +200,9 @@ func _on_locker_reveal_player():
 
 func _on_coyote_timer_timeout():
 	coyote_time = false
+
+func show_e():
+	e.visible = true
+	
+func hide_e():
+	e.visible = false
