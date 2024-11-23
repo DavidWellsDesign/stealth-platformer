@@ -19,7 +19,7 @@ class_name Player
 
 var knockback = 200
 
-const SPEED = 130.0
+const SPEED = 110.0
 const SLIDE_SPEED = 20 # How much the character slides when stopping, lower number should be more
 
 const AIR_SPEED = 30
