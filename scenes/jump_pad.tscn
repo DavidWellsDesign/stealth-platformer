@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://wysy4h1g6fot"]
+
+[ext_resource type="Texture2D" uid="uid://b3styyw6nd0w7" path="res://assets/sprites/JumpPad.png" id="1_gqjfm"]
+[ext_resource type="Script" path="res://scripts/jump_pad.gd" id="1_tsuq7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u86xy"]
+atlas = ExtResource("1_gqjfm")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cni17"]
+atlas = ExtResource("1_gqjfm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opj7n"]
+atlas = ExtResource("1_gqjfm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i4pb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u86xy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cni17")
+}],
+"loop": false,
+"name": &"active",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opj7n")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl51w"]
+size = Vector2(16, 8)
+
+[node name="JumpPad" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_tsuq7")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5i4pb")
+animation = &"active"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kl51w")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://oo8juwkdxt3u"]
+[gd_scene load_steps=26 format=4 uid="uid://oo8juwkdxt3u"]
 
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="2_fsbpj"]
 [ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="3_hx42x"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cwmmnfc50xhcu" path="res://scenes/locker.tscn" id="13_sqcwc"]
 [ext_resource type="PackedScene" uid="uid://cpmm0vild0boj" path="res://scenes/laser.tscn" id="14_d3qop"]
 [ext_resource type="PackedScene" uid="uid://dygw81dv661ku" path="res://scenes/searchlight_large.tscn" id="14_gpsfx"]
+[ext_resource type="PackedScene" uid="uid://wysy4h1g6fot" path="res://scenes/jump_pad.tscn" id="16_eew5x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ivyll"]
 blend_mode = 1
@@ -229,6 +230,7 @@ position = Vector2(-328, 40)
 rotation = 3.06362
 rotates = false
 script = ExtResource("11_wa1gh")
+speed = 0.2
 
 [node name="Searchlight2" parent="Lighting/SearchlightPath3/PathFollow2D" instance=ExtResource("13_ihf8i")]
 position = Vector2(-1.52588e-05, 1.52588e-05)
@@ -346,6 +348,18 @@ position = Vector2(-711, -153)
 [node name="Laser" parent="Objects" instance=ExtResource("14_d3qop")]
 position = Vector2(-615, -217)
 rotation = 3.14159
+
+[node name="JumpPad" parent="Objects" instance=ExtResource("16_eew5x")]
+position = Vector2(41, 71)
+bounce_velocity = -450
+
+[node name="JumpPad2" parent="Objects" instance=ExtResource("16_eew5x")]
+position = Vector2(-375, -89)
+bounce_velocity = -550
+
+[node name="JumpPad3" parent="Objects" instance=ExtResource("16_eew5x")]
+position = Vector2(-487, -89)
+bounce_velocity = -610
 
 [node name="Exit2" parent="." instance=ExtResource("7_qlp25")]
 position = Vector2(529, 239)

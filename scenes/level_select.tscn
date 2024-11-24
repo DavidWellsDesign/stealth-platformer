@@ -47,6 +47,25 @@ theme_override_fonts/font = ExtResource("2_pix1r")
 theme_override_font_sizes/font_size = 8
 text = "Key | C = Cleared | S = Secret exit found | T = Best time"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 509.0
+offset_top = -9.0
+offset_right = 834.0
+offset_bottom = -7.0
+rotation = 1.57079
+scale = Vector2(1.52, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 341.0
+offset_top = -11.0
+offset_right = 550.0
+offset_bottom = -9.0
+rotation = 1.57079
+scale = Vector2(1.52, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -56,7 +75,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -296.0
 offset_top = -132.0
-offset_right = 136.0
+offset_right = 335.0
 offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -76,7 +95,7 @@ theme_override_styles/focus = ExtResource("3_f3smb")
 theme_override_styles/hover = ExtResource("3_1cxxv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = ExtResource("4_0drej")
-text = "[1] Level 1"
+text = "  1 - Getting started"
 alignment = 0
 
 [node name="Level2" type="Button" parent="VBoxContainer"]
@@ -93,7 +112,7 @@ theme_override_styles/focus = ExtResource("3_f3smb")
 theme_override_styles/hover = ExtResource("3_1cxxv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = ExtResource("4_0drej")
-text = "[2] Level 2"
+text = "  2 - Internal Darkness"
 alignment = 0
 
 [node name="Level3" type="Button" parent="VBoxContainer"]
@@ -110,7 +129,7 @@ theme_override_styles/focus = ExtResource("3_f3smb")
 theme_override_styles/hover = ExtResource("3_1cxxv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = ExtResource("4_0drej")
-text = "[3] Level 3"
+text = "  3 - Spicy meatball"
 alignment = 0
 
 [node name="Level4" type="Button" parent="VBoxContainer"]
@@ -127,7 +146,7 @@ theme_override_styles/focus = ExtResource("3_f3smb")
 theme_override_styles/hover = ExtResource("3_1cxxv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = ExtResource("4_0drej")
-text = "[4] Level 4"
+text = "  4 - Parralel Worlds"
 alignment = 0
 
 [node name="Level5" type="Button" parent="VBoxContainer"]
@@ -144,7 +163,7 @@ theme_override_styles/focus = ExtResource("3_f3smb")
 theme_override_styles/hover = ExtResource("3_1cxxv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = ExtResource("4_0drej")
-text = "[5] Level 5"
+text = "  5 - Don't get spotted"
 alignment = 0
 
 [node name="Level6" type="Button" parent="VBoxContainer"]
@@ -161,7 +180,7 @@ theme_override_styles/focus = ExtResource("3_f3smb")
 theme_override_styles/hover = ExtResource("3_1cxxv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = ExtResource("4_0drej")
-text = "[6] Level 6"
+text = "  6 - Lots o' lasers"
 alignment = 0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
@@ -171,9 +190,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 184.0
+offset_left = 197.0
 offset_top = -132.0
-offset_right = 320.0
+offset_right = 333.0
 offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -222,9 +241,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -112.0
+offset_left = 29.0
 offset_top = -132.0
-offset_right = 132.0
+offset_right = 273.0
 offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -279,7 +298,7 @@ offset_right = 23.0
 offset_bottom = -69.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.886275, 0.952941, 0.894118, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_1ghx4")
 theme_override_font_sizes/font_size = 16
 text = ">Select Level"
