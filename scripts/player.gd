@@ -27,10 +27,12 @@ const JUMP_VELOCITY = -250.0
 const AIR_SLOWDOWN = 5 # How fast you lose velocity in the air when releasing a direction
 
 const WALL_JUMP_VELOCITY_X = 200 # Horizontal and vertical velocity for wall jump
-const WALL_JUMP_VELOCITY_Y = -200
+const WALL_JUMP_VELOCITY_Y = -220
 
 const DASH_SPEED = 150  # Speed of the dash
 const DASH_DURATION = 0.5  # Duration of the dash in seconds
+
+const WALL_SLIDE_DIVIDE = 0.7 # How much the fall speed is divided by when sliding down a wall
 
 var equipped_weapon = "sword"
 var can_attack = true
@@ -43,6 +45,7 @@ var is_dashing = false
 var dash_timer = 0.0
 var coyote_time:bool = false
 var was_on_floor:bool = false
+var caught:bool = false # Game over
 
 signal game_over
 
@@ -63,21 +66,21 @@ func _on_spawn(position: Vector2, direction: String):
 func _physics_process(delta):
 
 	if player_hidden == false:
-		if Input.is_action_just_pressed("attack") and can_attack == true:
-			animation_player.play("attack")
-			attack_cooldown.start()
-			can_attack = false
-			
-			if not is_on_floor() and Input.is_action_pressed("move_down"):
-				sword_point.rotation_degrees = 90
-			else:
-				if Input.is_action_pressed("move_up"):
-					sword_point.rotation_degrees = -90
-				else:
-					if animated_sprite.flip_h:
-						sword_point.rotation_degrees = 180
-					else:
-						sword_point.rotation_degrees = 0
+		#if Input.is_action_just_pressed("attack") and can_attack == true:
+			#animation_player.play("attack")
+			#attack_cooldown.start()
+			#can_attack = false
+			#
+			#if not is_on_floor() and Input.is_action_pressed("move_down"):
+				#sword_point.rotation_degrees = 90
+			#else:
+				#if Input.is_action_pressed("move_up"):
+					#sword_point.rotation_degrees = -90
+				#else:
+					#if animated_sprite.flip_h:
+						#sword_point.rotation_degrees = 180
+					#else:
+						#sword_point.rotation_degrees = 0
 			
 		# Once you leave the ground start the coyote timer
 		if was_on_floor && !is_on_floor():
@@ -86,7 +89,10 @@ func _physics_process(delta):
 		
 		# Add the gravity.
 		if not is_on_floor():
-			velocity += get_gravity() * delta
+			if is_on_wall():
+				velocity += (get_gravity() * delta) * WALL_SLIDE_DIVIDE
+			else:
+				velocity += get_gravity() * delta
 
 		# Handle jump.
 		if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_time == true):
@@ -112,13 +118,19 @@ func _physics_process(delta):
 				animated_sprite.flip_h = true
 			
 			# Play animations
-			if is_on_floor():
-				if direction == 0:
-					animated_sprite.play("idle")
-				else:
-					animated_sprite.play("run")
+			if caught == true:
+				animated_sprite.play("die")
 			else:
-				animated_sprite.play("jump")
+				if is_on_floor():
+					if direction == 0:
+						animated_sprite.play("idle")
+					else:
+						animated_sprite.play("run")
+				else:
+					if is_on_wall_only():
+						animated_sprite.play("slide")
+					else:
+						animated_sprite.play("jump")
 			
 			if direction:
 				if is_on_floor():

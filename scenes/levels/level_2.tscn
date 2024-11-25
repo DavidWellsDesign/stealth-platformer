@@ -210,7 +210,6 @@ offset_bottom = 160.0
 
 [node name="LevelTimer" parent="LevelCompleteLayer" instance=ExtResource("14_u37ga")]
 unique_name_in_owner = true
-offset_top = 8.0
 offset_bottom = 31.0
 level = 1
 

@@ -45,6 +45,7 @@ func game_over():
 	print("You Died")
 	AudioManager.play_hurt_sound()
 	Engine.time_scale = 0.5
+	player.caught = true
 	player.get_node("CollisionShape2D").queue_free()
 	player.get_node("Hurtbox").queue_free()
 	respawn_timer.start()
