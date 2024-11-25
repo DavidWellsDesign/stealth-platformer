@@ -70,8 +70,6 @@ offset_bottom = 160.0
 
 [node name="LevelTimer" parent="LevelCompleteLayer" instance=ExtResource("3_fg1wy")]
 unique_name_in_owner = true
-offset_top = 8.0
-offset_bottom = 31.0
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true

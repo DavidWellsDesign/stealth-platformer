@@ -80,6 +80,7 @@ position = Vector2(112, -56)
 [node name="Exit" parent="Environment" instance=ExtResource("5_bhhsx")]
 position = Vector2(576, 288)
 scale = Vector2(2, 2)
+script = null
 
 [node name="Laser" parent="Environment" instance=ExtResource("8_8smuv")]
 position = Vector2(608, 144)
@@ -116,10 +117,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -248.0
-offset_top = -16.0
-offset_right = 32.0
-offset_bottom = 98.0
+offset_left = -264.0
+offset_top = -20.0
+offset_right = -48.0
+offset_bottom = 94.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -153,6 +154,7 @@ theme_override_styles/focus = ExtResource("9_vul20")
 theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ai8yx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
+disabled = true
 text = "Options"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
@@ -179,10 +181,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -248.0
-offset_top = -111.0
-offset_right = -32.0
-offset_bottom = -44.0
+offset_left = -264.0
+offset_top = -124.0
+offset_right = -48.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_b67vn")

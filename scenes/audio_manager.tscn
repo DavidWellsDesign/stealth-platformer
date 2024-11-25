@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://sf0j20o0ieyj"]
+[gd_scene load_steps=11 format=3 uid="uid://sf0j20o0ieyj"]
 
 [ext_resource type="Script" path="res://scripts/audio_manager.gd" id="1_xvd67"]
 [ext_resource type="AudioStream" uid="uid://d3eoh0v4c0sdt" path="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 01 I Hear Their Footsteps (Action 01).mp3" id="2_ycwu7"]
@@ -6,9 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://bita8nkw8abk5" path="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 03 Time Is A Multiplier (Action 03).mp3" id="4_0exeh"]
 [ext_resource type="AudioStream" uid="uid://buxdu6s2kf40a" path="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 04 In The Blink Of An Eye (Action 04).mp3" id="5_kuxqx"]
 [ext_resource type="AudioStream" uid="uid://dlk46ikis37f3" path="res://assets/sounds/hurt.wav" id="6_n0e2y"]
+[ext_resource type="AudioStream" uid="uid://d1byqxx351m5c" path="res://assets/music/One Man Symphony - Reflective District (Free) - 06 Chase Starts (Action 01 Loops).mp3" id="6_oupa0"]
+[ext_resource type="AudioStream" uid="uid://dy55cvyg1fqb4" path="res://assets/music/One Man Symphony - Reflective District (Free) - 07 No Giving Up Now (Action 02).mp3" id="7_gj2nh"]
+[ext_resource type="AudioStream" uid="uid://cac7ds63nqmlt" path="res://assets/music/One Man Symphony - Reflective District (Free) - 10 The Game Of Cat and Mouse (Main Menu Theme).mp3" id="8_fib3l"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_vevkf"]
-clip_count = 4
+clip_count = 7
 clip_0/name = &"Track1"
 clip_0/stream = ExtResource("2_ycwu7")
 clip_0/auto_advance = 0
@@ -21,6 +24,15 @@ clip_2/auto_advance = 0
 clip_3/name = &"Track4"
 clip_3/stream = ExtResource("5_kuxqx")
 clip_3/auto_advance = 0
+clip_4/name = &"Track6"
+clip_4/stream = ExtResource("6_oupa0")
+clip_4/auto_advance = 0
+clip_5/name = &"Track7"
+clip_5/stream = ExtResource("7_gj2nh")
+clip_5/auto_advance = 0
+clip_6/name = &"Track10"
+clip_6/stream = ExtResource("8_fib3l")
+clip_6/auto_advance = 0
 _transitions = {
 Vector2i(-1, -1): {
 "fade_beats": 1,

@@ -17,7 +17,7 @@ func _on_next_level_pressed():
 
 func _on_main_menu_pressed():
 	game_manager.unpause()
-	AudioManager.update_music_for_scene("Track1")
+	AudioManager.update_music_for_scene("Track10")
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
 
 func _input(event):

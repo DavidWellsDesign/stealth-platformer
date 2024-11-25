@@ -57,7 +57,7 @@ offset_bottom = -61.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_05wy4")
 theme_override_font_sizes/font_size = 16
-text = "Press Q to QPU jump"
+text = "Press Q to swap worlds"
 
 [node name="TileMaps" type="Node2D" parent="."]
 
@@ -77,7 +77,7 @@ tile_set = ExtResource("5_8hm38")
 
 [node name="Player" parent="." instance=ExtResource("6_igpy6")]
 unique_name_in_owner = true
-position = Vector2(368, 48)
+position = Vector2(-440, 16)
 collision_mask = 29
 health = 50
 
@@ -200,8 +200,6 @@ offset_bottom = 160.0
 
 [node name="LevelTimer" parent="LevelCompleteLayer" instance=ExtResource("16_h53tj")]
 unique_name_in_owner = true
-offset_top = 8.0
-offset_bottom = 31.0
 
 [connection signal="timeout" from="GameManager/RespawnTimer" to="GameManager" method="_on_respawn_timer_timeout"]
 [connection signal="game_over" from="Player" to="GameManager" method="_on_player_game_over"]

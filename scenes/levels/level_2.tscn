@@ -78,7 +78,7 @@ tile_set = ExtResource("1_ftleh")
 
 [node name="Player" parent="." instance=ExtResource("5_154x4")]
 unique_name_in_owner = true
-position = Vector2(264, -312)
+position = Vector2(-440, 32)
 collision_mask = 29
 health = 50
 
