@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brt4de8oxnibq"
+path="res://.godot/imported/One Man Symphony - Reflective District (Free) - 09 Footsteps At Your Heels (Action 04).mp3-92f6c07596d669fed958566a671f7b5c.mp3str"
+
+[deps]
+
+source_file="res://assets/music/One Man Symphony - Reflective District (Free) - 09 Footsteps At Your Heels (Action 04).mp3"
+dest_files=["res://.godot/imported/One Man Symphony - Reflective District (Free) - 09 Footsteps At Your Heels (Action 04).mp3-92f6c07596d669fed958566a671f7b5c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

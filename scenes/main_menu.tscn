@@ -1,26 +1,20 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvwjur0o8qr1y"]
+[gd_scene load_steps=17 format=4 uid="uid://dvwjur0o8qr1y"]
 
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="1_dvl23"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_dvtwo"]
 [ext_resource type="Texture2D" uid="uid://chkefnupiggxh" path="res://assets/sprites/TitleScreen.png" id="2_2542i"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_b67vn"]
+[ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="2_nvtgf"]
+[ext_resource type="PackedScene" uid="uid://c47n0jl0y20py" path="res://scenes/camera.tscn" id="3_dmht7"]
+[ext_resource type="PackedScene" uid="uid://bjg3fbj55cgu7" path="res://scenes/player.tscn" id="4_x82fq"]
+[ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="5_bhhsx"]
+[ext_resource type="PackedScene" uid="uid://cpmm0vild0boj" path="res://scenes/laser.tscn" id="8_8smuv"]
+[ext_resource type="StyleBox" uid="uid://c4qy1kn7tfwrs" path="res://resources/Styles/main_menu_focus.tres" id="9_vul20"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plg74"]
 
 [sub_resource type="Theme" id="Theme_wca8c"]
 default_font = ExtResource("1_dvl23")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83qc6"]
-bg_color = Color(0.129165, 0.713936, 0.367338, 1)
-border_width_left = 5
-border_width_right = 5
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdsvk"]
-bg_color = Color(0.105882, 0.0117647, 0.14902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brb1x"]
 bg_color = Color(0.510601, 0.510601, 0.510601, 1)
@@ -32,9 +26,12 @@ shadow_size = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2htsd"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2qm7"]
-bg_color = Color(0.134991, 0.704997, 0.484143, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 8
+border_width_top = 2
+border_width_right = 8
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai8yx"]
 bg_color = Color(0.510601, 0.510601, 0.510601, 1)
@@ -44,8 +41,9 @@ corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 shadow_size = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ujqx"]
-bg_color = Color(2.74345e-06, 0.713263, 0.43839, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7iwh"]
+bg_color = Color(0.956863, 0.180392, 0.121569, 1)
+skew = Vector2(-0.5, 0)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -56,7 +54,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dvtwo")
 
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="BG" type="TileMapLayer" parent="Environment"]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAAAAAACAA0AAAACAAAAAAACAA0AAAABAAAAAAACAA0AAAAAAAIAAAACAA0AAAAAAAEAAAACAA0AAAAAAAMAAAACAA0AAAAAAAoAAAACAA0AAAAAAAsAAAACAA0AAAABAAoAAAACAA0AAAABAAsAAAACAA0AAAACAAsAAAACAA0AAAADAAsAAAACAA0AAAAEAAsAAAACAA0AAAAFAAsAAAACAA0AAAAEAAoAAAACAA0AAAADAAoAAAACAA0AAAACAAoAAAACAA0AAAAAAAQAAAACAA0AAAAAAAUAAAACAA0AAAAAAAYAAAACAA0AAAAAAAcAAAACAA0AAAAAAAgAAAACAA0AAAAAAAkAAAACAA0AAAADAAAAAAACAA0AAAAEAAAAAAACAA0AAAAFAAAAAAACAA0AAAAGAAAAAAACAA0AAAAHAAAAAAACAA0AAAAIAAAAAAACAA0AAAAJAAAAAAACAA0AAAAKAAAAAAACAA0AAAALAAAAAAACAA0AAAAMAAAAAAACAA0AAAANAAAAAAACAA0AAAAOAAAAAAACAA0AAAAPAAAAAAACAA0AAAAQAAAAAAACAA0AAAARAAAAAAACAA0AAAASAAAAAAACAA0AAAATAAAAAAACAA0AAAATAAEAAAACAA0AAAATAAIAAAACAA0AAAATAAMAAAACAA0AAAATAAQAAAACAA0AAAATAAUAAAACAA0AAAATAAYAAAACAA0AAAATAAcAAAACAA0AAAATAAgAAAACAA0AAAATAAkAAAACAA0AAAATAAoAAAACAA0AAAATAAsAAAACAA0AAAASAAsAAAACAA0AAAARAAsAAAACAA0AAAAQAAsAAAACAA0AAAAPAAsAAAACAA0AAAAOAAsAAAACAA0AAAANAAsAAAACAA0AAAAMAAsAAAACAA0AAAALAAsAAAACAA0AAAAKAAsAAAACAA0AAAAJAAsAAAACAA0AAAAIAAsAAAACAA0AAAAHAAsAAAACAA0AAAAGAAsAAAACAA0AAAAFAAoAAAACAA0AAAAGAAoAAAACAA0AAAAHAAoAAAACAA0AAAAIAAoAAAACAA0AAAAJAAoAAAACAA0AAAAKAAoAAAACAA0AAAALAAoAAAACAA0AAAAMAAoAAAACAA0AAAANAAoAAAACAA0AAAAOAAoAAAACAA0AAAAPAAoAAAACAA0AAAAQAAoAAAACAA0AAAASAAoAAAACAA0AAAARAAoAAAACAA0AAAANAAYAAAACAA0AAAAOAAYAAAACAA0AAAABAAEAAAACAA0AAAABAAIAAAACAA0AAAABAAMAAAACAA0AAAABAAQAAAACAA0AAAABAAUAAAACAA0AAAABAAYAAAACAA0AAAABAAcAAAACAA0AAAABAAgAAAACAA0AAAABAAkAAAACAA0AAAACAAEAAAACAA0AAAACAAIAAAACAA0AAAACAAMAAAACAA0AAAACAAQAAAACAA0AAAACAAUAAAACAA0AAAACAAYAAAACAA0AAAACAAcAAAACAA0AAAACAAgAAAACAA0AAAACAAkAAAACAA0AAAADAAEAAAACAA0AAAADAAIAAAACAA0AAAADAAMAAAACAA0AAAADAAQAAAACAA0AAAADAAUAAAACAA0AAAADAAYAAAACAA0AAAADAAcAAAACAA0AAAADAAgAAAACAA0AAAADAAkAAAACAA0AAAAEAAEAAAACAA0AAAAEAAIAAAACAA0AAAAEAAMAAAACAA0AAAAEAAQAAAACAA0AAAAEAAUAAAACAA0AAAAEAAYAAAACAA0AAAAEAAcAAAACAA0AAAAEAAgAAAACAA0AAAAEAAkAAAACAA0AAAAFAAEAAAACAA0AAAAFAAIAAAACAA0AAAAFAAMAAAACAA0AAAAFAAQAAAACAA0AAAAFAAUAAAACAA0AAAAFAAYAAAACAA0AAAAFAAcAAAACAA0AAAAFAAgAAAACAA0AAAAFAAkAAAACAA0AAAAGAAEAAAACAA0AAAAGAAIAAAACAA0AAAAGAAMAAAACAA0AAAAGAAQAAAACAA0AAAAGAAUAAAACAA0AAAAGAAYAAAACAA0AAAAGAAcAAAACAA0AAAAGAAgAAAACAA0AAAAGAAkAAAACAA0AAAAHAAEAAAACAA0AAAAHAAIAAAACAA0AAAAHAAMAAAACAA0AAAAHAAQAAAACAA0AAAAHAAUAAAACAA0AAAAHAAYAAAACAA0AAAAHAAcAAAACAA0AAAAHAAgAAAACAA0AAAAHAAkAAAACAA0AAAAIAAEAAAACAA0AAAAIAAIAAAACAA0AAAAIAAMAAAACAA0AAAAIAAQAAAACAA0AAAAIAAUAAAACAA0AAAAIAAYAAAACAA0AAAAIAAcAAAACAA0AAAAIAAgAAAACAA0AAAAIAAkAAAACAA0AAAAJAAEAAAACAA0AAAAJAAIAAAACAA0AAAAJAAMAAAACAA0AAAAJAAQAAAACAA0AAAAJAAUAAAACAA0AAAAJAAYAAAACAA0AAAAJAAcAAAACAA0AAAAJAAgAAAACAA0AAAAJAAkAAAACAA0AAAAKAAEAAAACAA0AAAAKAAIAAAACAA0AAAAKAAMAAAACAA0AAAAKAAQAAAACAA0AAAAKAAUAAAACAA0AAAAKAAYAAAACAA0AAAAKAAcAAAACAA0AAAAKAAgAAAACAA0AAAAKAAkAAAACAA0AAAALAAEAAAACAA0AAAALAAIAAAACAA0AAAALAAMAAAACAA0AAAALAAQAAAACAA0AAAALAAUAAAACAA0AAAALAAYAAAACAA0AAAALAAcAAAACAA0AAAALAAgAAAACAA0AAAALAAkAAAACAA0AAAAMAAEAAAACAA0AAAAMAAIAAAACAA0AAAAMAAMAAAACAA0AAAAMAAQAAAACAA0AAAAMAAUAAAACAA0AAAAMAAYAAAACAA0AAAAMAAcAAAACAA0AAAAMAAgAAAACAA0AAAAMAAkAAAACAA0AAAANAAEAAAACAA0AAAANAAIAAAACAA0AAAANAAMAAAACAA0AAAANAAQAAAACAA0AAAANAAUAAAACAA0AAAANAAcAAAACAA0AAAANAAgAAAACAA0AAAANAAkAAAACAA0AAAAOAAEAAAACAA0AAAAOAAIAAAACAA0AAAAOAAMAAAACAA0AAAAOAAQAAAACAA0AAAAOAAUAAAACAA0AAAAOAAcAAAACAA0AAAAOAAgAAAACAA0AAAAOAAkAAAACAA0AAAAPAAEAAAACAA0AAAAPAAIAAAACAA0AAAAPAAMAAAACAA0AAAAPAAQAAAACAA0AAAAPAAUAAAACAA0AAAAPAAYAAAACAA0AAAAPAAcAAAACAA0AAAAPAAgAAAACAA0AAAAPAAkAAAACAA0AAAAQAAEAAAACAA0AAAAQAAIAAAACAA0AAAAQAAMAAAACAA0AAAAQAAQAAAACAA0AAAAQAAUAAAACAA0AAAAQAAYAAAACAA0AAAAQAAcAAAACAA0AAAAQAAgAAAACAA0AAAAQAAkAAAACAA0AAAARAAEAAAACAA0AAAARAAIAAAACAA0AAAARAAMAAAACAA0AAAARAAQAAAACAA0AAAARAAUAAAACAA0AAAARAAYAAAACAA0AAAARAAcAAAACAA0AAAARAAgAAAACAA0AAAARAAkAAAACAA0AAAASAAEAAAACAA0AAAASAAIAAAACAA0AAAASAAMAAAACAA0AAAASAAQAAAACAA0AAAASAAUAAAACAA0AAAASAAYAAAACAA0AAAASAAcAAAACAA0AAAASAAgAAAACAA0AAAASAAkAAAACAA0AAAA=")
+tile_set = ExtResource("2_nvtgf")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Environment"]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAACAAAAAAADAAAAAAABAAAAAAADAAAAAAAAAAIAAAADAAAAAAAAAAEAAAADAAAAAAAAAAMAAAADAAAAAAAAAAoAAAADAAAAAAAAAAsAAAADAAAAAAABAAoAAAADAAAAAAABAAsAAAADAAAAAAACAAsAAAADAAAAAAADAAsAAAADAAAAAAAEAAsAAAADAAAAAAAFAAsAAAADAAAAAAAEAAoAAAADAAAAAAADAAoAAAADAAAAAAACAAoAAAADAAAAAAAAAAQAAAADAAAAAAAAAAUAAAADAAAAAAAAAAYAAAADAAAAAAAAAAcAAAADAAAAAAAAAAgAAAADAAAAAAAAAAkAAAADAAAAAAADAAAAAAADAAAAAAAEAAAAAAADAAAAAAAFAAAAAAADAAAAAAAGAAAAAAADAAAAAAAHAAAAAAADAAAAAAAIAAAAAAADAAAAAAAJAAAAAAADAAAAAAAKAAAAAAADAAAAAAALAAAAAAADAAAAAAAMAAAAAAADAAAAAAANAAAAAAADAAAAAAAOAAAAAAADAAAAAAAPAAAAAAADAAAAAAAQAAAAAAADAAAAAAARAAAAAAADAAAAAAASAAAAAAADAAAAAAATAAAAAAADAAAAAAATAAEAAAADAAAAAAATAAIAAAADAAAAAAATAAMAAAADAAAAAAATAAQAAAADAAAAAAATAAUAAAADAAAAAAATAAYAAAADAAAAAAATAAcAAAADAAAAAAATAAgAAAADAAAAAAATAAkAAAADAAAAAAATAAoAAAADAAAAAAATAAsAAAADAAAAAAASAAsAAAADAAAAAAARAAsAAAADAAAAAAAQAAsAAAADAAAAAAAPAAsAAAADAAAAAAAOAAsAAAADAAAAAAANAAsAAAADAAAAAAAMAAsAAAADAAAAAAALAAsAAAADAAAAAAAKAAsAAAADAAAAAAAJAAsAAAADAAAAAAAIAAsAAAADAAAAAAAHAAsAAAADAAAAAAAGAAsAAAADAAAAAAAFAAoAAAADAAAAAAAGAAoAAAADAAAAAAAHAAoAAAADAAAAAAAIAAoAAAADAAAAAAAJAAoAAAADAAAAAAAKAAoAAAADAAAAAAALAAoAAAADAAAAAAAMAAoAAAADAAAAAAANAAoAAAADAAAAAAAOAAoAAAADAAAAAAAPAAoAAAADAAAAAAAQAAoAAAADAAAAAAASAAoAAAADAAAAAAARAAoAAAADAAAAAAANAAYAAAAEAAAAAAAOAAYAAAAEAAAAAAAKAAgAAAAEAAAAAAALAAgAAAAEAAAAAAA=")
+tile_set = ExtResource("2_nvtgf")
+
+[node name="Camera" parent="Environment" instance=ExtResource("3_dmht7")]
+position = Vector2(336, 32)
+scale = Vector2(4, 4)
+max_angle_left = -45
+max_angle_right = 10
+rotation_speed = 10
+
+[node name="Player" parent="Environment" instance=ExtResource("4_x82fq")]
+unique_name_in_owner = true
+position = Vector2(112, -56)
+
+[node name="Exit" parent="Environment" instance=ExtResource("5_bhhsx")]
+position = Vector2(576, 288)
+scale = Vector2(2, 2)
+
+[node name="Laser" parent="Environment" instance=ExtResource("8_8smuv")]
+position = Vector2(608, 144)
+rotation = -3.14159
+scale = Vector2(2, 2)
+
+[node name="Laser2" parent="Environment" instance=ExtResource("8_8smuv")]
+position = Vector2(496, 320)
+rotation = -1.57079
+scale = Vector2(2, 2)
+
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 320.0
 offset_bottom = 160.0
@@ -64,6 +100,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_2542i")
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,14 +118,13 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -248.0
 offset_top = -16.0
-offset_right = 75.0
+offset_right = 32.0
 offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 3
 focus_neighbor_bottom = NodePath("../Options")
 theme = SubResource("Theme_wca8c")
@@ -97,15 +133,14 @@ theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_dvl23")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/focus = SubResource("StyleBoxFlat_83qc6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_pdsvk")
+theme_override_styles/focus = ExtResource("9_vul20")
+theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
 text = "Start Game"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Exit")
@@ -114,15 +149,14 @@ theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_dvl23")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/focus = SubResource("StyleBoxFlat_h2qm7")
-theme_override_styles/hover = SubResource("StyleBoxFlat_pdsvk")
+theme_override_styles/focus = ExtResource("9_vul20")
+theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ai8yx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
 text = "Options"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../Options")
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -130,14 +164,15 @@ theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_dvl23")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/focus = SubResource("StyleBoxFlat_3ujqx")
-theme_override_styles/hover = SubResource("StyleBoxFlat_pdsvk")
+theme_override_styles/focus = ExtResource("9_vul20")
+theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ai8yx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
 text = "Exit
 "
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -145,14 +180,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -248.0
-offset_top = -112.0
-offset_right = 4.0
-offset_bottom = -17.0
+offset_top = -111.0
+offset_right = -32.0
+offset_bottom = -44.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_b67vn")
 theme_override_font_sizes/font_size = 32
-text = "TEST"
+theme_override_styles/normal = SubResource("StyleBoxFlat_l7iwh")
+text = "Sneaky
+  Sprint"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_settings_pressed"]

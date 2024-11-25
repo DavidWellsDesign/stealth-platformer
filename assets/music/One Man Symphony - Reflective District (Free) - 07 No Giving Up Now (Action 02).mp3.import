@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy55cvyg1fqb4"
+path="res://.godot/imported/One Man Symphony - Reflective District (Free) - 07 No Giving Up Now (Action 02).mp3-13ed8033862714b2777a2756fe5c61d3.mp3str"
+
+[deps]
+
+source_file="res://assets/music/One Man Symphony - Reflective District (Free) - 07 No Giving Up Now (Action 02).mp3"
+dest_files=["res://.godot/imported/One Man Symphony - Reflective District (Free) - 07 No Giving Up Now (Action 02).mp3-13ed8033862714b2777a2756fe5c61d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

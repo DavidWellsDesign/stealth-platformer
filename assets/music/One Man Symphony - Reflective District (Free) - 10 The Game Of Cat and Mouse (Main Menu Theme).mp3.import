@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cac7ds63nqmlt"
+path="res://.godot/imported/One Man Symphony - Reflective District (Free) - 10 The Game Of Cat and Mouse (Main Menu Theme).mp3-1b09d1cdef2638bc2851cc3b0d250ad0.mp3str"
+
+[deps]
+
+source_file="res://assets/music/One Man Symphony - Reflective District (Free) - 10 The Game Of Cat and Mouse (Main Menu Theme).mp3"
+dest_files=["res://.godot/imported/One Man Symphony - Reflective District (Free) - 10 The Game Of Cat and Mouse (Main Menu Theme).mp3-1b09d1cdef2638bc2851cc3b0d250ad0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
