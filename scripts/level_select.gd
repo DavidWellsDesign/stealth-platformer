@@ -6,6 +6,7 @@ extends Control
 @onready var level_4 = $VBoxContainer/Level4
 @onready var level_5 = $VBoxContainer/Level5
 @onready var level_6 = $VBoxContainer/Level6
+@onready var level_secret = $LevelSecret
 
 @onready var level_1_time = $"VBoxContainer2/Level 1 time"
 @onready var level_2_time = $"VBoxContainer2/Level 2 time"
@@ -87,6 +88,15 @@ func _ready():
 		level_6_time.text = "T: ["+ str(LevelProgress.completionTimes[5])+"]"
 
 
+	var secretLevel:bool = true
+	for i in LevelProgress.levelCompletion:
+		if LevelProgress.levelCompletion[i] != 2:
+			secretLevel = false
+
+	if secretLevel == true:
+		level_secret.disabled = false
+		print("secret level unlocked!")
+
 func _on_level_1_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 	AudioManager.update_music_for_scene("Track1")
@@ -115,3 +125,7 @@ func _on_level_5_pressed():
 func _on_level_6_pressed():
 	get_tree().change_scene_to_file("res://scenes/levels/level_6.tscn")
 	AudioManager.update_music_for_scene("Track6")
+
+
+func _on_level_secret_pressed():
+	get_tree().change_scene_to_file("res://scenes/levels/level_secret.tscn")

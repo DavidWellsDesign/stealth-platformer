@@ -1,6 +1,7 @@
 extends RayCast2D
 
 @onready var player = %Player
+@onready var game_manager = %GameManager
 
 signal game_over
 

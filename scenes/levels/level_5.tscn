@@ -147,6 +147,7 @@ shape = SubResource("WorldBoundaryShape2D_ko5uo")
 [node name="Lighting" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasModulateTest" type="CanvasModulate" parent="Lighting"]
@@ -343,7 +344,13 @@ scale = Vector2(1, 3.625)
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Locker" parent="Objects" instance=ExtResource("13_sqcwc")]
-position = Vector2(-711, -153)
+position = Vector2(-23, -129)
+
+[node name="Locker2" parent="Objects" instance=ExtResource("13_sqcwc")]
+position = Vector2(233, 239)
+
+[node name="Locker3" parent="Objects" instance=ExtResource("13_sqcwc")]
+position = Vector2(-151, 287)
 
 [node name="Laser" parent="Objects" instance=ExtResource("14_d3qop")]
 position = Vector2(-615, -217)
@@ -377,6 +384,10 @@ level = "Level5"
 [connection signal="game_over" from="Lighting/Camera" to="GameManager" method="_on_camera_game_over"]
 [connection signal="hidePlayer" from="Objects/Locker" to="Player" method="_on_locker_hide_player"]
 [connection signal="revealPlayer" from="Objects/Locker" to="Player" method="_on_locker_reveal_player"]
+[connection signal="hidePlayer" from="Objects/Locker2" to="Player" method="_on_locker_hide_player"]
+[connection signal="revealPlayer" from="Objects/Locker2" to="Player" method="_on_locker_reveal_player"]
+[connection signal="hidePlayer" from="Objects/Locker3" to="Player" method="_on_locker_hide_player"]
+[connection signal="revealPlayer" from="Objects/Locker3" to="Player" method="_on_locker_reveal_player"]
 [connection signal="game_over" from="Objects/Laser" to="GameManager" method="_on_laser_game_over"]
 
 [editable path="Lighting/SquareLight"]
