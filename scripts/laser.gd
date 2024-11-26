@@ -18,6 +18,7 @@ func _draw():
 		line_end = to_local(get_collision_point())
 		if get_collider() == player:
 			print('laser hit player')
-			game_over.emit()
+			#game_over.emit()
+			game_manager.game_over()
 	
 	draw_line(Vector2.ZERO, line_end, Color(1,1,1), 2.0)

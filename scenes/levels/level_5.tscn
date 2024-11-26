@@ -147,7 +147,6 @@ shape = SubResource("WorldBoundaryShape2D_ko5uo")
 [node name="Lighting" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasModulateTest" type="CanvasModulate" parent="Lighting"]

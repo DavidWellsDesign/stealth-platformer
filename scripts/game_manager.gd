@@ -11,7 +11,7 @@ var paused:bool = false
 func add_point():
 	score += 1
 	score_label.text = "You have " + str(score) + " coins"
-#
+
 #func _input(event):
 	#if Input.is_action_just_pressed('Pause'):
 		#if paused == false:
