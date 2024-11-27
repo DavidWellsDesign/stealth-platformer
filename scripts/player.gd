@@ -6,6 +6,8 @@ class_name Player
 @export var stats: Resource
 
 @onready var collision_shape_2d = $CollisionShape2D
+@onready var hurtbox = $Hurtbox
+@onready var hurtbox_collision_shape_2d = $Hurtbox/CollisionShape2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var wall_check_left = $WallCheckLeft
 @onready var wall_check_right = $WallCheckRight
@@ -204,11 +206,13 @@ func _on_locker_hide_player():
 	hide()
 	player_hidden = true
 	collision_shape_2d.set_disabled(true)
+	hurtbox_collision_shape_2d.set_disabled(true)
 
 func _on_locker_reveal_player():
 	show()
 	player_hidden = false
 	collision_shape_2d.set_disabled(false)
+	hurtbox_collision_shape_2d.set_disabled(false)
 
 func _on_coyote_timer_timeout():
 	coyote_time = false
