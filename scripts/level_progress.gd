@@ -2,9 +2,9 @@ extends Node
 
 var config = ConfigFile.new()
 
-var levelCompletion:Dictionary = {"Level1": 0, "Level2": 0, "Level3": 0, "Level4": 0, "Level5": 0, "Level6": 0}
+var levelCompletion:Dictionary = {"Level1": 0, "Level2": 0, "Level3": 0, "Level4": 0, "Level5": 0, "Level6": 0, "LevelS": 0}
 
-var completionTimes:Array = [0.0,0.0,0.0,0.0,0.0,0.0] #Dictionary won't work for some reason?
+var completionTimes:Array = [0.0,0.0,0.0,0.0,0.0,0.0,0.0] #Dictionary won't work for some reason?
 
 var unlock_all:bool = false
 

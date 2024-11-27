@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="5_bhhsx"]
 [ext_resource type="PackedScene" uid="uid://cpmm0vild0boj" path="res://scenes/laser.tscn" id="8_8smuv"]
 [ext_resource type="StyleBox" uid="uid://c4qy1kn7tfwrs" path="res://resources/Styles/main_menu_focus.tres" id="9_vul20"]
+[ext_resource type="StyleBox" uid="uid://b03ttlch8qeak" path="res://resources/Styles/main_menu_normal.tres" id="10_lqfgc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plg74"]
 
@@ -23,15 +24,6 @@ corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 shadow_size = 3
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2htsd"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-skew = Vector2(0.5, 0)
-border_width_left = 8
-border_width_top = 2
-border_width_right = 8
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai8yx"]
 bg_color = Color(0.510601, 0.510601, 0.510601, 1)
@@ -137,7 +129,7 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = ExtResource("9_vul20")
 theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_brb1x")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
+theme_override_styles/normal = ExtResource("10_lqfgc")
 text = "Start Game"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
@@ -153,7 +145,7 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = ExtResource("9_vul20")
 theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ai8yx")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
+theme_override_styles/normal = ExtResource("10_lqfgc")
 disabled = true
 text = "Options"
 
@@ -169,7 +161,7 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = ExtResource("9_vul20")
 theme_override_styles/hover = ExtResource("9_vul20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ai8yx")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2htsd")
+theme_override_styles/normal = ExtResource("10_lqfgc")
 text = "Exit
 "
 
