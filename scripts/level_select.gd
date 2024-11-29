@@ -33,13 +33,13 @@ func _ready():
 	if LevelProgress.unlock_all == false:
 		if LevelProgress.levelCompletion['Level1'] == 0:
 			level_2.disabled = true
-		if LevelProgress.levelCompletion['Level2'] == 0:
+		if LevelProgress.levelCompletion['Level1'] == 0:
 			level_3.disabled = true
-		if LevelProgress.levelCompletion['Level3'] == 0:
+		if LevelProgress.levelCompletion['Level2'] == 0 and LevelProgress.levelCompletion['Level3'] == 0:
 			level_4.disabled = true
-		if LevelProgress.levelCompletion['Level4'] == 0:
+		if LevelProgress.levelCompletion['Level2'] == 0 and LevelProgress.levelCompletion['Level3'] == 0:
 			level_5.disabled = true
-		if LevelProgress.levelCompletion['Level5'] == 0:
+		if LevelProgress.levelCompletion['Level4'] == 0 and LevelProgress.levelCompletion['Level5'] == 0:
 			level_6.disabled = true
 
 	# Show clear and secret stats
