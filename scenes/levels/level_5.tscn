@@ -41,7 +41,7 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_110p5"]
 _data = {
-"points": PackedVector2Array(62.6795, -7.40925, -62.6795, 7.40925, -328, 40, 5.37951, 20.2745, -5.37951, -20.2745, -376, -40, -49.3612, 1.4518, 49.3612, -1.4518, -336, -120, -4.3554, -38.1097, 4.3554, 38.1097, -296, 8, 0, 0, 0, 0, -328, 40)
+"points": PackedVector2Array(62.6795, -7.40925, -62.6795, 7.40925, -328, 40, 5.37951, 20.2745, -5.37951, -20.2745, -376, -40, -49.3612, 1.4518, 49.3612, -1.4518, -336, -104, -4.3554, -38.1097, 4.3554, 38.1097, -296, 8, 0, 0, 0, 0, -328, 40)
 }
 point_count = 5
 
@@ -123,7 +123,7 @@ tile_set = ExtResource("6_s1knw")
 
 [node name="Player" parent="." instance=ExtResource("8_x10ek")]
 unique_name_in_owner = true
-position = Vector2(9, -273)
+position = Vector2(-455, 47)
 collision_mask = 29
 health = 50
 
@@ -147,7 +147,6 @@ shape = SubResource("WorldBoundaryShape2D_ko5uo")
 [node name="Lighting" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasModulateTest" type="CanvasModulate" parent="Lighting"]
@@ -232,7 +231,7 @@ rotation = 3.06362
 progress = 105.713
 rotates = false
 script = ExtResource("11_wa1gh")
-speed = 0.2
+speed = 0.15
 
 [node name="Searchlight2" parent="Lighting/SearchlightPath3/PathFollow2D" instance=ExtResource("13_ihf8i")]
 position = Vector2(-1.52588e-05, 1.52588e-05)

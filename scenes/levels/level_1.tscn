@@ -201,7 +201,7 @@ max_angle_right = 20
 rotation_speed = 15
 
 [node name="Camera2" parent="Lighting" instance=ExtResource("8_uygul")]
-position = Vector2(329, -121)
+position = Vector2(329, -73)
 scale = Vector2(1.5, 1.5)
 max_angle_left = -25
 max_angle_right = 25
