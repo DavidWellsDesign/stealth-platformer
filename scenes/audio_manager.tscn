@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://sf0j20o0ieyj"]
 
-[ext_resource type="Script" path="res://scripts/audio_manager.gd" id="1_xvd67"]
+[ext_resource type="Script" uid="uid://dp1ycdh4yjccc" path="res://scripts/audio_manager.gd" id="1_xvd67"]
 [ext_resource type="AudioStream" uid="uid://d3eoh0v4c0sdt" path="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 01 I Hear Their Footsteps (Action 01).mp3" id="2_ycwu7"]
 [ext_resource type="AudioStream" uid="uid://c1pomwl7tv4jt" path="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 02 An Instant Burst (Action 02).mp3" id="3_8u02b"]
 [ext_resource type="AudioStream" uid="uid://bita8nkw8abk5" path="res://assets/music/One Man Symphony - In The Blink Of An Eye (Free) - 03 Time Is A Multiplier (Action 03).mp3" id="4_0exeh"]
@@ -35,22 +35,22 @@ clip_6/stream = ExtResource("8_fib3l")
 clip_6/auto_advance = 0
 _transitions = {
 Vector2i(-1, -1): {
-"fade_beats": 1,
+"fade_beats": 1.0,
 "fade_mode": 4,
 "from_time": 0,
 "to_time": 1
 },
 Vector2i(0, 1): {
-"fade_beats": 1,
+"fade_beats": 1.0,
 "fade_mode": 4,
 "from_time": 0,
-"to_time": 0
+"to_time": 1
 },
 Vector2i(1, 0): {
-"fade_beats": 1,
+"fade_beats": 1.0,
 "fade_mode": 4,
 "from_time": 0,
-"to_time": 0
+"to_time": 1
 }
 }
 

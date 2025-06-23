@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=4 uid="uid://dvhvprefjp3lk"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_b71c1"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="1_b71c1"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_74ugw"]
-[ext_resource type="Script" path="res://scripts/powerup_manager.gd" id="3_pm3gf"]
+[ext_resource type="Script" uid="uid://nsr6iulb2tr" path="res://scripts/powerup_manager.gd" id="3_pm3gf"]
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="4_05wy4"]
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="4_pc3at"]
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="5_8hm38"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cwmmnfc50xhcu" path="res://scenes/locker.tscn" id="11_necns"]
 [ext_resource type="PackedScene" uid="uid://cpmm0vild0boj" path="res://scenes/laser.tscn" id="12_ugk0i"]
 [ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="13_i8asd"]
-[ext_resource type="Script" path="res://scenes/levels/light_switch.gd" id="14_sm8yb"]
+[ext_resource type="Script" uid="uid://bwdebe5bsgi4" path="res://scenes/levels/light_switch.gd" id="14_sm8yb"]
 [ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="16_h53tj"]
 [ext_resource type="PackedScene" uid="uid://wysy4h1g6fot" path="res://scenes/jump_pad.tscn" id="17_xu86p"]
 

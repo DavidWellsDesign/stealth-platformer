@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="1_vajsg"]
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="2_fie2x"]
 [ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="3_fg1wy"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="3_q6evk"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="3_q6evk"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_rwg3t"]
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="5_ydcom"]
 [ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="6_55cu3"]

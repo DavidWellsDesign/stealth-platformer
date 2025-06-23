@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://m7e1xcyjk510"]
 
-[ext_resource type="Script" path="res://scripts/powerup.gd" id="1_j7r5f"]
+[ext_resource type="Script" uid="uid://dkqopy310jbqi" path="res://scripts/powerup.gd" id="1_j7r5f"]
 [ext_resource type="Texture2D" uid="uid://t4tb0rao83xq" path="res://assets/sprites/coin.png" id="2_3u4xt"]
 [ext_resource type="AudioStream" uid="uid://d2nljxrbgc0jv" path="res://assets/sounds/coin.wav" id="3_70p0g"]
 
@@ -193,8 +193,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lek2"]
 _data = {
-"RESET": SubResource("Animation_iyrec"),
-"pickup": SubResource("Animation_phmtg")
+&"RESET": SubResource("Animation_iyrec"),
+&"pickup": SubResource("Animation_phmtg")
 }
 
 [node name="Goal" type="Area2D"]

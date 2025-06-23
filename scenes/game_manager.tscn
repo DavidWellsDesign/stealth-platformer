@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dexnv7uxri85u"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_o2hi4"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="1_o2hi4"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_pj82j"]
 
 [node name="GameManager" type="Node"]

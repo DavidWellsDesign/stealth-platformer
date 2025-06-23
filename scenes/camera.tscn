@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c47n0jl0y20py"]
 
-[ext_resource type="Script" path="res://scripts/camera.gd" id="1_dsv1l"]
+[ext_resource type="Script" uid="uid://bqnfjo15mp214" path="res://scripts/camera.gd" id="1_dsv1l"]
 [ext_resource type="Texture2D" uid="uid://cmfdluwai8w4s" path="res://assets/sprites/longSpotlight.png" id="1_utf4p"]
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="3_kpmcd"]
-[ext_resource type="Script" path="res://scripts/light_collision.gd" id="3_vgqyf"]
+[ext_resource type="Script" uid="uid://bv5k1vj35i3sv" path="res://scripts/light_collision.gd" id="3_vgqyf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jj03k"]
 light_mode = 1

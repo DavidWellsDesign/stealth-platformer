@@ -1,9 +1,9 @@
 [gd_scene load_steps=51 format=3 uid="uid://bjg3fbj55cgu7"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_1ty7o"]
+[ext_resource type="Script" uid="uid://ghekscrad331" path="res://scripts/player.gd" id="1_1ty7o"]
 [ext_resource type="Texture2D" uid="uid://cjegaeerofa08" path="res://assets/sprites/knight.png" id="1_ng7l2"]
 [ext_resource type="Resource" uid="uid://d4kfpmr3xb3c0" path="res://resources/player_stats.tres" id="2_5yo0d"]
-[ext_resource type="Script" path="res://scripts/sword_hitbox.gd" id="3_aanga"]
+[ext_resource type="Script" uid="uid://bmukboqanx8hp" path="res://scripts/sword_hitbox.gd" id="3_aanga"]
 [ext_resource type="Texture2D" uid="uid://b65cmujbortyc" path="res://assets/sprites/fruit.png" id="3_qdcs7"]
 [ext_resource type="Texture2D" uid="uid://dxhtf385h25mk" path="res://assets/sprites/player.png" id="4_mfeu6"]
 [ext_resource type="Texture2D" uid="uid://ccvqadk0smuqv" path="res://assets/sprites/e small.png" id="6_onw1c"]
@@ -331,8 +331,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cpwlb"]
 _data = {
-"RESET": SubResource("Animation_cqujb"),
-"attack": SubResource("Animation_peoyn")
+&"RESET": SubResource("Animation_cqujb"),
+&"attack": SubResource("Animation_peoyn")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8wkf"]

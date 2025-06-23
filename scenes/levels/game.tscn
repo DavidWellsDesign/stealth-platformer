@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="1_wi1ha"]
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="2_umn7t"]
 [ext_resource type="PackedScene" uid="uid://dexnv7uxri85u" path="res://scenes/game_manager.tscn" id="3_qlxdf"]
-[ext_resource type="Script" path="res://scripts/powerup_manager.gd" id="4_a20j0"]
+[ext_resource type="Script" uid="uid://nsr6iulb2tr" path="res://scripts/powerup_manager.gd" id="4_a20j0"]
 [ext_resource type="PackedScene" uid="uid://bjg3fbj55cgu7" path="res://scenes/player.tscn" id="5_bj0ol"]
 [ext_resource type="PackedScene" uid="uid://fvpk2qqgy1y0" path="res://scenes/player_camera.tscn" id="6_x7ij5"]
 [ext_resource type="Texture2D" uid="uid://bn4i0gawye3go" path="res://assets/sprites/glow.png" id="7_g15p1"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cws5a13wubp4y" path="res://scenes/enemy.tscn" id="11_6tyrx"]
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="12_yns6x"]
 [ext_resource type="PackedScene" uid="uid://m7e1xcyjk510" path="res://scenes/goal.tscn" id="13_1psnw"]
-[ext_resource type="Script" path="res://scripts/unused/world_state.gd" id="14_cpe46"]
+[ext_resource type="Script" uid="uid://cqr0e7o56l5dw" path="res://scripts/unused/world_state.gd" id="14_cpe46"]
 [ext_resource type="PackedScene" uid="uid://bkgjcgqxvsvlv" path="res://scenes/door.tscn" id="15_qrjej"]
 [ext_resource type="PackedScene" uid="uid://4cnwogbcm6lt" path="res://scenes/spotlight_small.tscn" id="16_r5faq"]
 
@@ -222,8 +222,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_exjpu"]
 _data = {
-"RESET": SubResource("Animation_j1qwd"),
-"move": SubResource("Animation_a0mi5")
+&"RESET": SubResource("Animation_j1qwd"),
+&"move": SubResource("Animation_a0mi5")
 }
 
 [node name="Game" type="Node2D"]

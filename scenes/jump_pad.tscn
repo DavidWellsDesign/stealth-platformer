@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://wysy4h1g6fot"]
 
 [ext_resource type="Texture2D" uid="uid://b3styyw6nd0w7" path="res://assets/sprites/JumpPad.png" id="1_gqjfm"]
-[ext_resource type="Script" path="res://scripts/jump_pad.gd" id="1_tsuq7"]
+[ext_resource type="Script" uid="uid://byikp6hpeq8cw" path="res://scripts/jump_pad.gd" id="1_tsuq7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u86xy"]
 atlas = ExtResource("1_gqjfm")

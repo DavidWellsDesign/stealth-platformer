@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dpspmghmd2tjn"]
 
-[ext_resource type="Script" path="res://scripts/exit.gd" id="1_h1tm4"]
+[ext_resource type="Script" uid="uid://biqnciadodaut" path="res://scripts/exit.gd" id="1_h1tm4"]
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="2_nphw3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rscvw"]

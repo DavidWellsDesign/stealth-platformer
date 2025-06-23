@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=4 uid="uid://c3g0wds481w3a"]
 
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="1_ftleh"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="2_38cq7"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="2_38cq7"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_astmj"]
-[ext_resource type="Script" path="res://scripts/powerup_manager.gd" id="4_5acbt"]
+[ext_resource type="Script" uid="uid://nsr6iulb2tr" path="res://scripts/powerup_manager.gd" id="4_5acbt"]
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="4_tbafb"]
 [ext_resource type="PackedScene" uid="uid://bjg3fbj55cgu7" path="res://scenes/player.tscn" id="5_154x4"]
 [ext_resource type="PackedScene" uid="uid://b2qx64xqac3dh" path="res://scenes/kill_zone.tscn" id="6_6e5af"]

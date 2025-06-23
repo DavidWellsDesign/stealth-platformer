@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="1_2fy6p"]
 [ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="2_1i4vs"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="3_mha6l"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="3_mha6l"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_hqcfc"]
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="5_3kkqv"]
 [ext_resource type="PackedScene" uid="uid://bjg3fbj55cgu7" path="res://scenes/player.tscn" id="6_203hi"]

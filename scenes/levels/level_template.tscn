@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=4 uid="uid://ciq2cts767knq"]
 
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="2_vc7tt"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="4_xk1af"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="4_xk1af"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_ng48n"]
-[ext_resource type="Script" path="res://scripts/powerup_manager.gd" id="6_vq3ky"]
+[ext_resource type="Script" uid="uid://nsr6iulb2tr" path="res://scripts/powerup_manager.gd" id="6_vq3ky"]
 [ext_resource type="PackedScene" uid="uid://bjg3fbj55cgu7" path="res://scenes/player.tscn" id="7_k3r30"]
 [ext_resource type="PackedScene" uid="uid://4cnwogbcm6lt" path="res://scenes/spotlight_small.tscn" id="7_xmpam"]
 [ext_resource type="PackedScene" uid="uid://c47n0jl0y20py" path="res://scenes/camera.tscn" id="8_7sfio"]

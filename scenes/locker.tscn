@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cwmmnfc50xhcu"]
 
 [ext_resource type="Texture2D" uid="uid://joahfr20pflh" path="res://assets/sprites/world_tileset.png" id="1_4qcqm"]
-[ext_resource type="Script" path="res://scripts/locker.gd" id="1_mw2au"]
+[ext_resource type="Script" uid="uid://cjw4qqq4hcq5i" path="res://scripts/locker.gd" id="1_mw2au"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rscvw"]
 light_mode = 1

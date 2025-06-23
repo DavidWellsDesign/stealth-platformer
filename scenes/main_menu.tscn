@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=4 uid="uid://dvwjur0o8qr1y"]
 
 [ext_resource type="FontFile" uid="uid://bha54jnrnqo7f" path="res://assets/fonts/PixelOperator8.ttf" id="1_dvl23"]
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_dvtwo"]
+[ext_resource type="Script" uid="uid://cohajyfk2ftlr" path="res://scripts/main_menu.gd" id="1_dvtwo"]
 [ext_resource type="Texture2D" uid="uid://chkefnupiggxh" path="res://assets/sprites/TitleScreen.png" id="2_2542i"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_b67vn"]
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="2_nvtgf"]

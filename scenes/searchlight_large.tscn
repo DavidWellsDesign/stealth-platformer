@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dygw81dv661ku"]
 
-[ext_resource type="Script" path="res://scripts/searchlight.gd" id="1_pclcx"]
+[ext_resource type="Script" uid="uid://djnaxo6thlt3x" path="res://scripts/searchlight.gd" id="1_pclcx"]
 [ext_resource type="Texture2D" uid="uid://bp22uyrjfpaug" path="res://assets/sprites/round_spotlight.png" id="2_2s8lr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wdliw"]

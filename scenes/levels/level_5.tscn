@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://26oiant5it8x" path="res://scenes/UI/level_complete.tscn" id="2_fsbpj"]
 [ext_resource type="PackedScene" uid="uid://d1v43kqx27boh" path="res://scenes/UI/level_timer.tscn" id="3_hx42x"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="4_5pxac"]
+[ext_resource type="Script" uid="uid://jgs25ooihxk8" path="res://scripts/game_manager.gd" id="4_5pxac"]
 [ext_resource type="FontFile" uid="uid://plalmr6b48qn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_a3f3d"]
 [ext_resource type="TileSet" uid="uid://j7dwhp68yp4w" path="res://assets/Tilemaps/game.tres" id="6_s1knw"]
 [ext_resource type="PackedScene" uid="uid://dpspmghmd2tjn" path="res://scenes/exit.tscn" id="7_qlp25"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b2qx64xqac3dh" path="res://scenes/kill_zone.tscn" id="9_xexxn"]
 [ext_resource type="PackedScene" uid="uid://4cnwogbcm6lt" path="res://scenes/spotlight_small.tscn" id="10_x0dhe"]
 [ext_resource type="PackedScene" uid="uid://c47n0jl0y20py" path="res://scenes/camera.tscn" id="11_d71kk"]
-[ext_resource type="Script" path="res://scripts/path_follow_2d.gd" id="11_wa1gh"]
+[ext_resource type="Script" uid="uid://bilncrkoqhmyx" path="res://scripts/path_follow_2d.gd" id="11_wa1gh"]
 [ext_resource type="PackedScene" uid="uid://qe5h77kw7pim" path="res://scenes/square_light.tscn" id="12_r75a7"]
 [ext_resource type="PackedScene" uid="uid://c5a7p1krhvayb" path="res://scenes/searchlight.tscn" id="13_ihf8i"]
 [ext_resource type="PackedScene" uid="uid://cwmmnfc50xhcu" path="res://scenes/locker.tscn" id="13_sqcwc"]
